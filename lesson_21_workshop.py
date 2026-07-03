@@ -1,4 +1,5 @@
 print("It's my first program!")
+# My first python program
 print("Syuzanna Stepanyan\n")
 print("I am learning QA")
 num1 = 10
