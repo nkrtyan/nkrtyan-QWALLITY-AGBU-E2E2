@@ -25,3 +25,8 @@ print("Age: 31")
 print("City")
 print("Status:Learning Python basics")
 print("===========")
+
+name = input("Enter your name:")
+print(name)
+age = input ("Enter your age:")
+print(age)
