@@ -1,4 +1,4 @@
-print("Hello, World!")
+print("It's my frst program!")
 print("Diana Avetisyan\n")
 print("I have a bachelor degree in architecture and Design.")
 num1=20
