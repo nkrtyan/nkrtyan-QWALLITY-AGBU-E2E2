@@ -1,6 +1,6 @@
 print("It's my frst program!")
 print("Diana Avetisyan\n")
-print("I have a bachelor degree in architecture and Design.")
+print("I have a bachelor degree in Architecture and Design.")
 num1=20
 num2=80
 total_sum=num1+num2
