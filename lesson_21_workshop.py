@@ -1,8 +1,6 @@
-print("it's my first program")
-print("Heghine" , "Grigoryan") #my name and surname
-print("\n")
-print("I studied at YSU, Department of Mechanics and applied mathematics")
-x=5 
-y=5
-sum=x+y
-print(sum)
+print("it's my first program!")
+print("Lia Amiraghyan")
+print("") 
+print("I am an economist by poffesion") 
+a,b=10,5; print(a+b) # it's the solution
+
