@@ -7,5 +7,3 @@ number2 = 27
 print(number1 + number2)
 # this is my first python 
 print ("it's my first program")
-git config --global user.name "Anna Ayrapetyan"
-git config --global user.email "anna.ayrapetyan92@gmail.com"
