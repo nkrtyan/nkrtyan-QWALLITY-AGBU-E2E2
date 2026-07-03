@@ -1,2 +1,2 @@
-x=Aleta
+x="Hello world"
 print(x)
