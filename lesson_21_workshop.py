@@ -1,8 +1,9 @@
-print("It's my first program!")
-print("Heriknaz Grigoryan")
+print("it's my first program!")
+print("Heriqnaz Grigoryan")
 print()
-print("Manual QA Engineer and Test Automation")
-a = 5
-b = 10
-print(a + b)
-# This is my first work
+print("QA Engineer with 1.5+ years of manual testing experience")
+a = 15
+b = 27
+result = a + b
+print(result)
+#its my first file
