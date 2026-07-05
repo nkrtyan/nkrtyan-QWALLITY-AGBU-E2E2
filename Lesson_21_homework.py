@@ -1,3 +1,4 @@
+
 # Printing the same result using 3 different formatting methods in Python
 age = int(input("How old are you? "))
 decades = age // 10
