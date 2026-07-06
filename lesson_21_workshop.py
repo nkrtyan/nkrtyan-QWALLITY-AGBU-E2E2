@@ -1,21 +1,9 @@
- elGevorgian
+# My first Python program
 print("It's my first program!")
+print("Arpine Andreasyan")
 
-print("Elmira Gevorgyan")
-
-print("I am student learning Python")
-number_one = 30
-number_two = 31
-result = number_one + number_two
-print(result)
-
-
-#this is a comment
-=======
-print("it's my first program!")
-print("Lia Amiraghyan")
-print("") 
-print("I am an economist by poffesion") 
-a,b=10,5; print(a+b) # it's the solution
-
-main
+print()
+print("I studied at the Armenian State Pedagogical University.")
+num1 = 10
+num2 = 20
+print(num1 + num2)
