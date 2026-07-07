@@ -43,15 +43,16 @@ my_string2 = "w3resource"
 m = my_string2[:2] + my_string2[-2:]
 print(m)
 
-my_string3 = "I have a cut and I love it"
-z = my_string3.replace("cut", "dog")
+my_string3 = "I have a cat and I love it"
+z = my_string3.replace("cat", "dog")
 print(z)
 
 my_string4 = "I have 123 books"
-number = "123"
-reverse_number = number[::-1]
-result_string = my_string4.replace(number, reverse_number)
-print(result_string)
+words = my_string4.split()
+number = words[2]
+words[2] = number[::-1]
+result = " ".join(words)
+print(result)
 
 my_string5 = "five five was a race horse, two two was one too."
 result = my_string5.replace("five", "one")
