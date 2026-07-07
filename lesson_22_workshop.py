@@ -9,7 +9,7 @@ print(result)
 my_string3= "I have a cat and I love it" 
 result=my_string3.replace("cat","dog")
 print(result)
-4#
+#4
 text = "I have 123 books"
 result = text.replace("123", "321")
 print(result)
@@ -32,4 +32,5 @@ print((x + y)**2)
 a=2.5
 b=13.75
 c=int(a)+int(b)
-print(' '.join(reversed(str(c)))
+
+print(''.join(reversed(str(c))))
