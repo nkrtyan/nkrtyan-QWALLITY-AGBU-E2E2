@@ -30,6 +30,7 @@ for item in my_list:
     if item > maximum:
         maximum = item
 print("Maximum value:", maximum)
+# Nel, correct
 
 #Find the minimum value in a list.
 minimum = my_list[0]
@@ -37,11 +38,23 @@ for item in my_list:
     if item < minimum:
         minimum = item
 print("Minimum value:", minimum)
+# Nel, correct
 
 #Calculate the sum of all elements in a list.
 summary = 0
 for item in my_list:
     summary += item
 print("Sum of all elements:", summary)
+# Nel, correct
 
 #Sort the list in ascending order. Couldn't use built-in sort() or sorted() functions
+# TODO, you need to have two for nested loops, one external for the count, the second for internal swapping. See solution
+num = [12, 5, 8, 16]
+for i in range(len(num)):
+    for j in range(len(num) - 1):
+        if num[j] > num[j + 1]:
+            temp = num[j]
+            num[j] = num[j + 1]
+            num[j + 1] = temp
+
+print("Sorted list:", num)
