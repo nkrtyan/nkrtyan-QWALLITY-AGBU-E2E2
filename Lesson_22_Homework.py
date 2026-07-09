@@ -9,6 +9,7 @@ my_list1 = [2, 5, 3, 9, 7, 12, 25, 38, 49] # Find the maximum value in a list.
 38 > 25 # yes 38 = max
 49 > 38 # yes 49 = max
 maximum = 49
+# TODO, nooo :), you should use loop here. for cycle, have a look to others homeworks
 
 my_list2 = [2, 5, 3, 9, 7, 12, 25, 38, 49] # Find the minimum value in a list.
 2 < 2 # no if min = 2
@@ -21,6 +22,7 @@ my_list2 = [2, 5, 3, 9, 7, 12, 25, 38, 49] # Find the minimum value in a list.
 38 < 2 # no 2 = min
 49 < 2 # no 2 = min
 minimum = 2
+# TODO, the same here
 
 my_list3 = [2, 5, 3, 9, 7, 12, 25, 38, 49] # Calculate the sum of all elements in a list.
 0 + 2 = 2
@@ -33,7 +35,13 @@ my_list3 = [2, 5, 3, 9, 7, 12, 25, 38, 49] # Calculate the sum of all elements i
 63 + 38 = 101
 101 + 49 = 150
 sum = 150
+# TODO, see code below
+numbers = [11, 3, 35, 64, 57, 8, 79]
 
+total = 0
+for number in numbers:
+    total = total + number
+print(f"Sum of the list: {total}")
 
 my_list4 = [2, 5, 3, 9, 7, 12, 25, 38, 49] # Sort the list in ascending order.
 2 > 5 # no
@@ -44,3 +52,4 @@ my_list4 = [2, 5, 3, 9, 7, 12, 25, 38, 49] # Sort the list in ascending order.
 12 > 25 # no
 25 > 38 # no
 38 > 49 # no
+# TODO, incorrect, in the list you should have two nested for cycle
