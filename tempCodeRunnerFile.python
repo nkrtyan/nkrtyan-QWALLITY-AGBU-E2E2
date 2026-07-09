@@ -1,0 +1,5 @@
+my_list=[15,20,26,260,249,3365,4452,8]
+summary=0
+for number in my_list:
+   summary=summary+number
+print("sum", summary)

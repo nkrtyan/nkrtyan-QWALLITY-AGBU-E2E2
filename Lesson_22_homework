@@ -1,0 +1,57 @@
+#Find the maximum value in a list.
+my_list=[15,20,26,260,249,3365,4452,8]
+maximum=my_list[0]
+for number in my_list:
+    if number>maximum:
+        maximum=number
+print("maximum_value", maximum)
+
+ Find the minimum value in a list.
+
+my_list=[#Find the maximum value in a list.
+my_list=[15,20,26,260,249,3365,4452,8]
+maximum=my_list[0]
+for number in my_list:
+    if number>maximum:
+        maximum=number
+print("maximum_value", maximum)
+
+#Find the minimum value in a list.
+
+my_list=[15,20,26,260,249,3365,4452,8]
+minimum=my_list[0]
+for number in my_list:
+   if number<minimum:
+      minimum=number
+print("minimum_value", minimum)
+
+#Calculate the sum of all elements in a list.
+my_list=[15,20,26,260,249,3365,4452,8]
+summary=0
+for number in my_list:
+   summary=summary+number
+print("sum", summary)
+
+#Sort the list in ascending order.
+my_list=[15,20,26,260,249,3365,4452,8]
+if my_list[0] > my_list[1]:
+    temp = my_list[0]
+    my_list[0] = my_list[1]
+    my_list[1] = temp
+
+print("sorted", my_list)]
+minimum=my_list[0]
+for number in my_list:
+   if number<minimum:
+      minimum=number
+print("minimum_value", minimum)
+
+#Calculate the sum of all elements in a list.
+my_list=[15,20,26,260,249,3365,4452,8]
+summary=0
+for number in my_list:
+   summary=summary+number
+print("sum", summary)
+
+Sort the list in ascending order.
+-
