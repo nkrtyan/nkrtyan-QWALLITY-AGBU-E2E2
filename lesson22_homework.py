@@ -1,3 +1,4 @@
+# TODO, no need to write function, we didnt learn it yet, try to solev and write your sollution
 def find_max(numbers):
     max_value = numbers[0]
     for num in numbers:
@@ -21,7 +22,7 @@ def calculate_sum(numbers):
     return total
 
 
-def bubble_sort(numbers):
+def bubble_sort(numbers): # TODO, you need to describe how this function work and why you are using n-i-1 :)
     sorted_list = numbers.copy()
     n = len(sorted_list)
     for i in range(n):
@@ -39,3 +40,4 @@ print("Maximum:", find_max(numbers))
 print("Minimum:", find_min(numbers))
 print("Sum:", calculate_sum(numbers))
 print("Sorted list:", bubble_sort(numbers))
+ # Nel, the code is cortretc, but i would like to see your solution
