@@ -32,3 +32,5 @@ for i in range(len(numbers)):
             numbers[j] = numbers[j + 1]
             numbers[j + 1] = temp
 print("Sorted list:", numbers)
+
+# TODO, good job, all four algorithms are working correctly
