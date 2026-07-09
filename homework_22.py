@@ -6,22 +6,27 @@ for num in my_list:
     if num > maximum:
         maximum = num
 print(f"The maximum number in the list is: {maximum}")
+# Nel, correct
 
 minimum = my_list[0]
 for num in my_list:
     if num < minimum:
         minimum = num
 print(f"The minimum number in the list is: {minimum}")
+# Nel, correct
 
 total_sum = 0
 for num in my_list:
     total_sum += num
 print(f"The sum of all numbers in the list is: {total_sum}")
+# Nel, correct
 
-sorted_list = my_list[:] 
+
+sorted_list = my_list[:]  
 n = len(sorted_list)
 for i in range(n):
-    for j in range(0, n - i - 1):
+    for j in range(0, n - i - 1): # TODO, good solution, i hope you understand why using -i-1 :)
         if sorted_list[j] > sorted_list[j + 1]:
             sorted_list[j], sorted_list[j + 1] = sorted_list[j + 1], sorted_list[j]
 print(f"The sorted list is: {sorted_list}")
+# Nel, correct
