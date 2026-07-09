@@ -5,25 +5,17 @@ for number in my_list:
     if number>maximum:
         maximum=number
 print("maximum_value", maximum)
+# Nel, correct
 
- Find the minimum value in a list.
-
-my_list=[#Find the maximum value in a list.
-my_list=[15,20,26,260,249,3365,4452,8]
-maximum=my_list[0]
-for number in my_list:
-    if number>maximum:
-        maximum=number
-print("maximum_value", maximum)
 
 #Find the minimum value in a list.
-
 my_list=[15,20,26,260,249,3365,4452,8]
 minimum=my_list[0]
 for number in my_list:
    if number<minimum:
       minimum=number
 print("minimum_value", minimum)
+# Nel, correct
 
 #Calculate the sum of all elements in a list.
 my_list=[15,20,26,260,249,3365,4452,8]
@@ -31,10 +23,11 @@ summary=0
 for number in my_list:
    summary=summary+number
 print("sum", summary)
+# Nel, correct
 
 #Sort the list in ascending order.
 my_list=[15,20,26,260,249,3365,4452,8]
-if my_list[0] > my_list[1]:
+if my_list[0] > my_list[1]:  # TODO, with one if you will just check firts two elements, but you need to have for loop
     temp = my_list[0]
     my_list[0] = my_list[1]
     my_list[1] = temp
@@ -52,6 +45,13 @@ summary=0
 for number in my_list:
    summary=summary+number
 print("sum", summary)
+# TODO, task 4 you need to have such a solution
 
-Sort the list in ascending order.
--
+num = [12, 5, 8, 16]
+for i in range(len(num)):
+    for j in range(len(num) - 1 - i):
+        if num[j] > num[j + 1]:
+            temp = num[j]
+            num[j] = num[j + 1]
+            num[j + 1] = temp
+print(num)
