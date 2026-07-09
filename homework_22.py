@@ -1,5 +1,4 @@
 # 1. Find the maximum value in a list.
-
 # Get list of numbers from user input
 print()
 user_input = input("Exercise 1: Find the maximum value\n Enter numbers separated by spaces: ")
@@ -134,3 +133,5 @@ for i in range(n):
 
 # Print the result
 print(f"Exercise 5 result: Sorted list (descending): {sorted_numbers}\n")
+
+# TODO, the code is fully correct, but i prefer to review your code :)
