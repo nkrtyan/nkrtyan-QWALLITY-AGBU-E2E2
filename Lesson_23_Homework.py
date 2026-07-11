@@ -46,7 +46,7 @@ my_numbers.pop(0)
 
 print("Updated list:", my_numbers)
 
-my_list1 = [2, 5, 3, 9, 7, 12]
+my_list1 = [2, 5, 3, 9, 7, 12] #3 Write a Python program to get the difference between the two lists.
 my_list2 = [3, 7, 10, 12, 15]
 
 difference = []
@@ -54,8 +54,40 @@ difference = []
 for number in my_list1:
     if number not in my_list2:
         difference.append(number)
+for number in my_list2:
+    if number not in my_list1:
+        difference.append(number)
 
 print("List 1:", my_list1)
 print("List 2:", my_list2)
 print("Difference:", difference)
 
+my_tuple = (("name", "Kristine"), #Write a Python program to convert a tuple to a dictionary.
+            ("age", 38),
+            ("city", "Yerevan"))
+
+my_dict = {}
+
+for item in my_tuple:
+    key = item[0]
+    value = item[1]
+    my_dict[key] = value
+
+print("Tuple:", my_tuple)
+print("Dictionary:", my_dict)
+
+my_tuple = (2, 5, 3, 9) #Write a Python program to add an item in a tuple.
+new_item = 7
+my_tuple = my_tuple + (new_item,)
+
+print("Updated tuple:", my_tuple)
+
+my_dict = {
+    "name": "Kristine",
+    "age": 38,
+    "city": "Yerevan"
+}
+
+my_dict["University"] = "Polytechnic"
+
+print("Updated dictionary:", my_dict)
