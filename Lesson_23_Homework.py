@@ -82,7 +82,7 @@ my_tuple = my_tuple + (new_item,)
 
 print("Updated tuple:", my_tuple)
 
-my_dict = {
+my_dict = {  #Write a Python program to add a key with value to a dictionary
     "name": "Kristine",
     "age": 38,
     "city": "Yerevan"
@@ -91,3 +91,60 @@ my_dict = {
 my_dict["University"] = "Polytechnic"
 
 print("Updated dictionary:", my_dict)
+
+my_dict = { #Write a Python program to get the maximum and minimum value in a dictionary().
+    "a": 15,
+    "b": 7,
+    "c": 25,
+    "d": 3,
+    "e": 18
+}
+
+values = list(my_dict.values())
+
+maximum = values[0]
+minimum = values[0]
+
+for value in values:
+    if value > maximum:
+        maximum = value
+
+    if value < minimum:
+        minimum = value
+
+print("Dictionary:", my_dict)
+print("Maximum value:", maximum)
+print("Minimum value:", minimum)
+
+set1 = {2, 5, 3, 9} #Write a Python program to create a union of sets.
+set2 = {7, 3, 5, 12}
+
+union_set = set1.union(set2)
+
+print("Union:", union_set)
+
+
+student = {
+    "name": "Kristine Ghukasyan",
+    "age": 38,
+    "address": "Yerevan",
+    "education": "National Polytechnic University of Armenia",
+    "phone_numbers": ["093341485", "096341485"]
+}
+
+#1. Print the entire dictionary
+print("Student Information:")
+print(student)
+
+#2. Print only the student's name
+print("Name:", student["name"])
+
+#3. Print only the list of phone numbers
+print("Phone Numbers:", student["phone_numbers"])
+
+#4. Add a new key called "email"
+student["email"] = "kristinetigra@gmail.com"
+
+#5. Print the updated dictionary
+print("Updated Dictionary:")
+print(student)
