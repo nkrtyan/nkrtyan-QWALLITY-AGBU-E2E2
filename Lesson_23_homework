@@ -74,8 +74,8 @@ student_info = {
     "name": "Mariam",
     "age": 28,
     "address": "Yerevan",
-    "education": "IT",
-    "phone_numbers": ["091111111", "099999999"]
+    "education": "YSU",
+    "phone_numbers": ["011111111", "099999999"]
 }
 print(student_info)
 
