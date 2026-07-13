@@ -8,6 +8,7 @@ for a in num:
     if a < mini:
         mini = a
 print("Minimum value:", mini)
+# Nel, correct
 
 # Maximum
 maxi = num[0]
@@ -15,12 +16,14 @@ for a in num:
     if a > maxi:
         maxi = a
 print("Maximum value:", maxi)
+# Nel, correct
 
 # Sum
 total = 0
 for a in num:
     total += a
 print("Sum of values:", total)
+# Nel, correct
 
 # Sort
 for i in range(len(num)):
@@ -31,3 +34,4 @@ for i in range(len(num)):
             num[j + 1] = temp
 
 print("Sorted list:", num)
+# Nel, correct
