@@ -5,15 +5,17 @@ for number in numbers:
     if number not in unique:
         unique.append(number)
 print(unique)
+# Nel, correct
 
 
 #2 Write a Python program which print a specified list after removing the 0th, 4th and 5th elements.  
 my_list = [14, 40, 37, 7, 5, 6, 3]
 new_list = []
 for item in range(len(my_list)):
-    if item != 0 and item != 4 and item != 5:
+    if item != 0 and item != 4 and item != 5:# TODO, you can write item in [0,4,5]
         new_list.append(my_list[item])
 print(new_list)
+# Nel, correct
 
 
 #3 Write a Python program to get the difference between the two lists.
@@ -24,6 +26,7 @@ for item in list1:
     if item not in list2:
         dif.append(item)
 print(dif)
+# Nel, correct
 
 
 #4 Write a Python program to convert a tuple to a dictionary.
@@ -32,7 +35,7 @@ studentsdic = {}
 for item in studentstuple:
     studentsdic[item[0]] = item [1]
 print(studentsdic)
-
+# Nel, correct
 
 #5 Write a Python program to add an item in a tuple.
 #firstsolution
@@ -40,12 +43,14 @@ cars = ("Mercedes", "Kia", "BMW", "Toyota")
 new_car = ("BYD")
 cars = cars + (new_car,)
 print(cars)
+
 #secondsolution
 cars = ("Mercedes", "Kia", "BMW", "Toyota")
 temp=list(cars)
 temp.append ("BYD")
 cars=tuple(temp)
 print(cars)
+# Nel, correct
 
 
 #6 Write a Python program to add a key with value to a dictionary.
@@ -58,6 +63,7 @@ book={
 print(book["author"])
 book["parts"] = 7
 print(book)
+# Nel, correct
 
 
 #7 Write a Python program to get the maximum and minimum value in a dictionary().
@@ -78,6 +84,7 @@ for number in values:
         minimum=number
 print(maximum)
 print(minimum)
+
 #second
 fam={
    "Gayane": 1998,
@@ -86,6 +93,7 @@ fam={
 }
 print(max(fam.values()))
 print(min(fam.values()))
+# Nel, correct
 
 
 #8 Write a Python program to create a union of sets.
@@ -94,11 +102,13 @@ set1 = {1, 2, 3}
 set2 = {3, 4, 5}
 set3 = set1.union(set2)
 print(set3)
+
 #senond 
 set1 = {1, 2, 3}
 set2 = {3, 4, 5}
 set3 = set1 | set2
 print(set3)
+# Nel, correct
 
 #9 Student  Information
 student = {
@@ -115,3 +125,4 @@ print(student["phone_numbers"])
 
 student["email"] = "gayane.khachatran@gmail.com"
 print(student)
+# Nel, correct, good for you
