@@ -6,6 +6,7 @@ for item in list_with_duplicates:
     if item not in unique_list:
         unique_list.append(item)
 print(unique_list)
+# Nel, correct
 
 # 2. Write a Python program which print a specified list after removing the 0th, 4th and 5th elements.
 print()
@@ -14,6 +15,7 @@ del list[4]
 del list[3]
 del list[0]
 print(list)
+# Nel, correct
 
 # 3. Write a Python program to get the difference between the two lists.
 print()
@@ -21,12 +23,14 @@ list1 = [1, 2, 3, 4, 5]
 list2 = [4, 5, 6, 7, 8]
 difference = list(set(list1) - set(list2))
 print(difference) 
+# Nel, correct, but  using set you can lose duplicate item in list1
 
 #4. Write a Python program to convert a tuple to a dictionary.
 print()
 tuple_data = (('a', 1), ('b', 2), ('c', 3))
 dictionary_data = dict(tuple_data)
 print(dictionary_data)
+# Nel, correct
 
 
 #5 Write a Python program to add an item in a tuple.
@@ -35,6 +39,7 @@ tuple = (1, 2, 3)
 new_item = 4
 tuple = tuple + (new_item,)
 print(tuple)
+# Nel, correct
 
 
 #6 Write a Python program to add a key with value to a dictionary.
@@ -42,6 +47,7 @@ print()
 dictionary = {'a': 1, 'b': 2}
 dictionary['c'] = 3
 print(dictionary)
+# Nel, correct
 
 
 #7 Write a Python program to get the maximum and minimum value in a dictionary().
@@ -51,6 +57,7 @@ max_value = max(dictionary.values())
 min_value = min(dictionary.values())
 print("Maximum value:", max_value)
 print("Minimum value:", min_value)
+# Nel, correct
 
 
 #8 Write a Python program to create a union of sets.
@@ -59,6 +66,7 @@ set1 = {1, 2, 3}
 set2 = {3, 4, 5}
 union_set = set1.union(set2)
 print(union_set)
+# Nel, correct
 
 
 #9 Student  Information
@@ -87,3 +95,4 @@ print("Student's name:", student_info["name"])
 print("Phone numbers:", student_info["phone_numbers"])
 student_info["email"] = "hripsime.babayan@example.com"
 print(f"Updated dictionary: {student_info}\n")
+# Nel, correct
