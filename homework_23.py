@@ -69,6 +69,7 @@ copied_list = []
 for item in my_list:
     copied_list.append(item)
 print("Copied list:", copied_list)
+   
     
     
 9
