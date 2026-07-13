@@ -11,6 +11,7 @@ for i in countries:
 
 print("All countries-", countries)
 print("Distinct Countries-", distinct_countries)
+# Nel, correct
 
 #2 Write a Python program which print a specified list after removing the 0th, 4th and     5th elements.  
 print("2.")
@@ -19,6 +20,7 @@ del countries [5]
 del countries [4]
 del countries [0]
 print(countries)
+# Nel, correct
 
 #3 Write a Python program to get the difference between th
 #e two lists.
@@ -27,6 +29,7 @@ list_1 = [1, 2, 3, 4, 5,]
 list_2 = [4, 5, 6, 2, 1, 7, 8,]
 difference = set(list_2) - set(list_1)
 print(difference)
+# Nel, correct,  but be careful with set, you can lose data in the firts list
 
 #4 Write a Python program to convert a tuple to a dictionary.
 print("4.")
@@ -38,6 +41,7 @@ for i in range(0, len(student_tuple), 2):
 
 print("Tuple:", student_tuple)
 print("Dictionary:", student_dict)
+# Nel, correct
 
 #5 Write a Python program to add an item in a tuple.
 print("5.")
@@ -45,6 +49,7 @@ my_tuple = ("Poghos", "Petros", "Martiros", 2026)
 updated_tuple = list(my_tuple)
 updated_tuple.append("Baghdasar")
 print(tuple(updated_tuple))
+# Nel, correct
 
 #6 Write a Python program to add a key with value to a dictionary.
 print("6.")
@@ -54,6 +59,7 @@ my_car={
 }
 my_car["year"]= 2000
 print(my_car)
+# Nel, correct
 
 
 #7 Write a Python program to get the maximum and minimum value in a dictionary().
@@ -63,6 +69,7 @@ exam_results = {"Ani": 88, "Davit": 74, "Mariam": 91, "Sona": 67}
 print("Dictionary:", exam_results)
 print("Maximum value:", max(exam_results.values()))
 print("Minimum value:", min(exam_results.values()))
+# Nel, correct
 
 #8 Write a Python program to create a union of sets.
 print("8.")
@@ -73,6 +80,7 @@ union_result = animals.union(birds)
 print("Animals:", animals)
 print("Birds:", birds)
 print("Union:", union_result)
+# Nel, correct
 
 
 """#9 Student  Information
@@ -103,6 +111,6 @@ print("Phone numbers", student_info["phone"])
 student_info["email"] = "ani@gmail.com"
 print("Updated student information", student_info)
 
-
+# Nel, correct
 
 
