@@ -13,6 +13,7 @@ for item in my_list:
     if item not in new_list:
         new_list.append(item)
 print(new_list)
+# Nel, correct
 
 
 # 2. Remove 0th, 4th and 5th elements from a list
@@ -22,6 +23,7 @@ for i in range(len(numbers)):
     if i not in [0, 4, 5]:
         result.append(numbers[i])
 print(result)
+# Nel, correct
 
 # 3. Difference between two lists
 list1 = [1, 2, 3, 4, 5]
@@ -31,18 +33,21 @@ for item in list1:
     if item not in list2:
         difference.append(item)
 print(difference)
+# Nel, correct
 
 
 # 4. Convert tuple to dictionary
 my_tuple = (("name", "Mariam"), ("age", 28), ("city", "Yerevan"))
 my_dictionary = dict(my_tuple)
 print(my_dictionary)
+# Nel, correct
 
 
 # 5. Add an item in a tuple
 my_tuple = (1, 2, 3)
 new_tuple = my_tuple + (4,)
 print(new_tuple)
+# Nel, correct
 
 
 # 6. Add a key with value to dictionary
@@ -52,6 +57,7 @@ student = {
 }
 student["city"] = "Yerevan"
 print(student)
+# Nel, correct
 
 
 # 7. Get maximum and minimum value in dictionary
@@ -62,12 +68,14 @@ numbers_dict = {
 }
 print(max(numbers_dict.values()))
 print(min(numbers_dict.values()))
+# Nel, correct
 
 # 8. Create a union of sets
 set1 = {1, 2, 3}
 set2 = {3, 4, 5}
 union_set = set1.union(set2)
 print(union_set)
+# Nel, correct
 
 # 9. Student Information
 student_info = {
@@ -86,3 +94,4 @@ print(student_info["phone_numbers"])
 student_info["email"] = "mariam@gmail.com"
 
 print(student_info)
+# Nel, correct, great job
