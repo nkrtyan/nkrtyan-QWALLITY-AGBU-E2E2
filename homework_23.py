@@ -6,7 +6,7 @@ for item in elements:
     if item != elements1[-1]:
         elements1.append(item)
 print(elements1)
-
+# Nel, correct, but there are more easier way, jut loop to list, take each element and check with others
 
 2
 list = ['White', 'Red', 'Green', 'Black', 'Yellow', 'Pink', 'Blue']
@@ -15,6 +15,7 @@ for i in range(len(list)):
     if i != 0 and i != 4 and i != 5:
         result_list.append(list[i])
 print(result_list)
+# Nel, correct
 
 
 3
@@ -22,7 +23,7 @@ list_1 = [10, 20, 30, 40, 50, 60]
 list_2 = [5, 10, 15, 20, 25, 30, 35, 40]
 difference_list = []
 for item_1 in list_1:
-    if list_2.count(item_1) == 0:
+    if list_2.count(item_1) == 0: # TODO, good research, hope you understadn how it works
         difference_list.append(item_1)
 print(difference_list)
 
@@ -34,7 +35,7 @@ for i in range(len(list)):
     if i % 2 != 0:
         odd_list.append(list[i])
 print(odd_list)
-
+# TODO, incorrect,  you should convert tuple to dict
 
 5
 list_3d = []
@@ -48,11 +49,12 @@ for i in range(3):
     list_3d.append(row_2d)
 print(list_3d)
 
-
+# TODO, incorrect, task is different, read one more time
 6
 letters = ['a', 'd', 'd', 'r', 'e', 's', 's']
 result_text = "".join(letters)
 print(result_text)
+# TODO, incorrect
 
 
 7
@@ -61,6 +63,7 @@ if len(test_list) == 0:
     print("List is empty")
 else:
     print("List is not empty")
+# TODO, incorrect, i dont see max and min values
 
 
 8
@@ -69,7 +72,7 @@ copied_list = []
 for item in my_list:
     copied_list.append(item)
 print("Copied list:", copied_list)
-   
+# TODO, incorrect 
     
     
 9
@@ -86,3 +89,4 @@ print(student["name"])
 print(student["phone_numbers"])
 student["email"] = "stepanyan@gmail.com"
 print(student)
+# Nel,correct
