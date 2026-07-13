@@ -4,12 +4,14 @@
 #     if number not in uniq_number:
 #         uniq_number.append(number)
 # print(uniq_number)
+# Nel, correct
 
 # my_list = [10,20,30,40,50,80,101]
 # del my_list[5]
 # del my_list[4]
 # del my_list[0]
 # print("my_list:", my_list)
+# Nel, correct
 
 # list_1 = [100, 252, 3, 4, 10]
 # list_2 = [3, 100, 4, 5, 6]
@@ -18,10 +20,12 @@
 #     if number not in list_2:
 #         new_list.append(number)
 # print(new_list)
+# Nel, correct
 
 # my_tuple = (("name", "Gayane"), ("age", 35), ("city", "Yerevan"),("education", "YSU"))
 # my_dict = dict(my_tuple)
 # print(my_dict)
+# Nel, correct
 
 # for the 5th task, i used two approaches
 # my_tuple = (1, 2, 3,15,36)
@@ -29,12 +33,14 @@
 # my_list.append(4)
 # my_tuple = tuple(my_list)
 # print(my_tuple)
+# Nel, correct
 
 # my_tuple = (10, 20, 30, 40)
 # my_list = list(my_tuple)
 # my_list.insert(3, 99)
 # my_tuple = tuple(my_list)
 # print(my_tuple)
+# Nel, can be based on requirement
 
 # my_dict = {
 #     "name": "Gayane",
@@ -42,6 +48,7 @@
 # }
 # my_dict["adress"]="Sofiayi 60/1"
 # print(my_dict)
+# Nel, correct
 
 my_dict = {
     "a": 10,
@@ -59,9 +66,12 @@ my_dict = {
 # print("Maximum:", maximum)
 # print("Minimum:", minimum)
 
+# TODO, just use max(),min() when get values
+
 # set_1 = {10, 2, 3, 4}
 # set_2 = {3, 40, 5, 6}
 # print(set_1|set_2)
+# Nel, correct
 
 student = {
     "name": "Gayane",
@@ -77,3 +87,4 @@ print(student["name"])
 print(student["phone_numbers"])
 student["email"] = "gayane@example.com"
 print(student)
+# Nel, correct
