@@ -26,13 +26,12 @@ print("sum", summary)
 # Nel, correct
 
 #Sort the list in ascending order.
-my_list=[45,15,56,78,14100,85,456,258,265,98,11256,1] # TODO, this will not work without loop, eveen need two nested loop
-if my_list[0] > my_list[1]:
-    temp = my_list[0]
-    my_list[0] = my_list[1]
-    my_list[1] = temp
+my_list=[45,15,56,78,14100,85,456,258,265,98,11256,1]
+for item in range(len(my_list)):
+    for j in range(len(my_list) - 1):
+        if my_list[j] > my_list[j + 1]:
+            temp = my_list[j]
+            my_list[j] = my_list[j + 1]
+            my_list[j + 1] = temp
 
-print("sorted", my_list)
-# TODO, correct this tsak :)
-
-
+print(my_list)
