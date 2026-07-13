@@ -31,7 +31,6 @@ if my_list[0] > my_list[1]:  # TODO, with one if you will just check firts two e
     temp = my_list[0]
     my_list[0] = my_list[1]
     my_list[1] = temp
-
 print("sorted", my_list)]
 minimum=my_list[0]
 for number in my_list:
