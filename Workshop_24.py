@@ -3,7 +3,7 @@ input_num = int(input("Enter a number: "))
 if input_num in number_list:
     if input_num%2 == 0:
         print(f"The number {input_num} is even.")
-    if input_num%2 != 0:
+    else:
         print(f"The number {input_num} is odd.")
     print(f"The number {input_num} exists in the list.")
 else:
