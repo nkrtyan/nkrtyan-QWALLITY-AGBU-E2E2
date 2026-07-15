@@ -38,6 +38,7 @@ for number in my_numbers:
 
 print("Original list:", my_numbers)
 print("List without duplicates:", unique_numbers)
+#Nel, correct
 
 
 my_numbers.pop(5) #2 Write a Python program which print a specified list after removing the 0th, 4th and     5th elements.  
@@ -45,6 +46,7 @@ my_numbers.pop(4)
 my_numbers.pop(0)
 
 print("Updated list:", my_numbers)
+#Nel, correct
 
 my_list1 = [2, 5, 3, 9, 7, 12] #3 Write a Python program to get the difference between the two lists.
 my_list2 = [3, 7, 10, 12, 15]
@@ -54,7 +56,7 @@ difference = []
 for number in my_list1:
     if number not in my_list2:
         difference.append(number)
-for number in my_list2:
+for number in my_list2: # TDSO, this part is additional
     if number not in my_list1:
         difference.append(number)
 
@@ -67,6 +69,7 @@ my_tuple = (("name", "Kristine"), #Write a Python program to convert a tuple to 
             ("city", "Yerevan"))
 
 my_dict = {}
+#Nel, correct
 
 for item in my_tuple:
     key = item[0]
@@ -75,12 +78,14 @@ for item in my_tuple:
 
 print("Tuple:", my_tuple)
 print("Dictionary:", my_dict)
+#Nel, correct
 
 my_tuple = (2, 5, 3, 9) #Write a Python program to add an item in a tuple.
 new_item = 7
 my_tuple = my_tuple + (new_item,)
 
 print("Updated tuple:", my_tuple)
+#Nel, correct
 
 my_dict = {  #Write a Python program to add a key with value to a dictionary
     "name": "Kristine",
@@ -89,8 +94,8 @@ my_dict = {  #Write a Python program to add a key with value to a dictionary
 }
 
 my_dict["University"] = "Polytechnic"
-
 print("Updated dictionary:", my_dict)
+#Nel, correct
 
 my_dict = { #Write a Python program to get the maximum and minimum value in a dictionary().
     "a": 15,
@@ -116,12 +121,14 @@ print("Dictionary:", my_dict)
 print("Maximum value:", maximum)
 print("Minimum value:", minimum)
 
+#Nel,just call max() and min()
+
 set1 = {2, 5, 3, 9} #Write a Python program to create a union of sets.
 set2 = {7, 3, 5, 12}
 
 union_set = set1.union(set2)
-
 print("Union:", union_set)
+#Nel, correct
 
 
 student = {
@@ -148,3 +155,4 @@ student["email"] = "kristinetigra@gmail.com"
 #5. Print the updated dictionary
 print("Updated Dictionary:")
 print(student)
+#Nel, correct
