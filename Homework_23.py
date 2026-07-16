@@ -7,11 +7,12 @@ print(unique_numbers)
 # Nel, correct
 
 my_list = [2, 4, 6, 8, 10, 12]
-del my_list[1]
+del my_list[5]
 del my_list[3]
 del my_list[0]
 print("my_list:", my_list)
 # TODO, would be  better to remove from the end of the list
+# Corrected version:
 
 my_list_1 = [3, 6, 9, 12, 15]
 my_list_2 = [1, 3, 5, 7, 9]
@@ -57,16 +58,17 @@ dict_2 = {
     "c": 3,
     "d": 4
 }
-maximum = 0
-minimum = 0
+max = 0
+min = 0
 for value in dict_2.values():
-     if value > maximum:
-         maximum = value
-     if minimum == 0 or value < minimum:
-         minimum = value
-print("Maximum:", maximum)
-print("Minimum:", minimum)
+     if value > max:
+         max = value
+     if min == 0 or value < min:
+         min = value
+print("Maximum:", max)
+print("Minimum:", min)
 # TODO, just call max(),min() functions
+# Corrected version:
 
 set_1 = {5, 6, 7, 8}
 set_2 = {9, 10, 11, 12}
