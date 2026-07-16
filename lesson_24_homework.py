@@ -2,14 +2,14 @@
 sum = 0
 first_num = 0
 second_num = 1
-print(first_num)
+print(first_num, end=" ")
 while sum <=50:
-    print(second_num)
+    print(second_num, end=" ")
     sum = first_num + second_num
     first_num = second_num
     second_num = sum
 print()
-# TODO, you should primt numbers next to each other
+# TODO, you should primt numbers next to each other  DONE
 
 #Write a Python program that accepts a string and calculates the number of digits and letters. 
 my_text = "Python 3.13"
@@ -31,6 +31,9 @@ while i<5:
     print("*")
     i+=1
 
-for item in range(5): # TODO, no need additional cycle, optimise code
-    print("*", end=" ")
+print("* " * 5)
+
+
+# for item in range(5): # TODO, no need additional cycle, optimise code DONE
+#     print("* ", end=" ")
 
