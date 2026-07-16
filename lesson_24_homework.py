@@ -9,6 +9,7 @@ while sum <=50:
     first_num = second_num
     second_num = sum
 print()
+# TODO, you should primt numbers next to each other
 
 #Write a Python program that accepts a string and calculates the number of digits and letters. 
 my_text = "Python 3.13"
@@ -22,7 +23,7 @@ for char in "Python 3.13":
 
 print(f"Digits count is: {int_count}")
 print(f"letters count is: {char_count}", "\n")
-
+# Nel, correct
 
 #Write a Python program to print alphabet pattern 'L'
 i = 0
@@ -30,6 +31,6 @@ while i<5:
     print("*")
     i+=1
 
-for item in range(5):
+for item in range(5): # TODO, no need additional cycle, optimise code
     print("*", end=" ")
 
