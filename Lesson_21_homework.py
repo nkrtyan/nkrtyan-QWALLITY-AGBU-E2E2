@@ -1,8 +1,4 @@
-
-# Printing the same result using 3 different formatting methods in Python
-age = int(input("How old are you? "))
-decades = age // 10
-years = age % 10
-print("You are %s decades and %s year(s) old" % (decades, years))
-print("You are {} decades and {} year(s) old".format(decades, years))
-print(f"You are {decades} decades and {years} year(s) old")
+age = [1,2,3,5,7]
+for ages in age:
+    if ages >= 2:
+        print("HEHEFEF")
