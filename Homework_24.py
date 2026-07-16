@@ -11,6 +11,7 @@ for i in range(max):
     if i < max:
         print(i, end = " ")
 print()
+# Nel, correct
 
 my_text = "Python 3.13"
 letters = 0
@@ -24,9 +25,11 @@ for char in my_text:
 
 print("Letters:", letters)
 print("Digits:", digits)
+# Nel, correct
 
 height = 7
 for i in range(height - 1):
     print("*")
-print("*****")
+print("*****") # TODO, 6*"*"
+#Nel, correct
 
