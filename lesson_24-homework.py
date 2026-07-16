@@ -9,6 +9,7 @@ b = 1
 while a <= 50:
     print(a, end=" ")
     a, b = b, a + b
+# Nel, correct
 
 '''Write a Python program that accepts a string and calculates the number of digits and letters.  
 Sample Data: Python 3.13
@@ -28,6 +29,7 @@ for char in my_text:
 
 print("Letters:", letters)
 print("Digits:", digits)
+# Nel, correct
 
 '''Write a Python program to print alphabet pattern 'L'  
 Expected Output:
@@ -43,6 +45,6 @@ for row in range(7):
     if row < 6:
         print("*")
     else:
-        print("***")
-
+        print("***") # TODO, should be 5*"*"
+# Nel, correct
 
