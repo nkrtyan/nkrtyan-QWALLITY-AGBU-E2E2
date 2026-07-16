@@ -12,6 +12,7 @@ for item in range(0, 50):
         a, b = b, b+a
         list100.append(b)
 print(list100)
+# Nel, correct,  we no need to append to the list, or cycle to loop and print elements next to each other
 
 """2. Write a Python program that accepts a string and calculates the number of digits and letters.  
 Sample Data: Python 3.13
@@ -28,7 +29,7 @@ for let in "Python 3.13":
         listdigits.append(let)
 print("Letters" , len(listletters))
 print("Digits" , len(listdigits))
-
+# Nel, corerct
 
 """3. Write a Python program to print alphabet pattern 'L'  
 Expected Output:
@@ -45,6 +46,6 @@ for items in range (1,8):
       
     else:
         print("* "*5)
-    
+# Nel, correct
 
    
