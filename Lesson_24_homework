@@ -2,27 +2,30 @@
 x=int(input("print number:"))
 a=0
 b=1
-c=a+b
+c=a+b # TODO, this is additional, you have this in line 10
 while c<=x:
     print(c, end=',')
     a=b
     b=c
     c=a+b
+# Nel, correct
 
 # Write a Python program that accepts a string and calculates the number of digits and letters. 
 Sample_Data = "Python 3.13"
 letter_count = 0
 for i in range(len(Sample_Data)):
     char = Sample_Data[i]
-    if char == ' ' or char == '.':
+    if char == ' ' or char == '.': # TODO, correct, but you can also skip this checking as anyway it will not count
         continue
     letter_count += 1
     print(char)
 print("Letter count is", letter_count)
 
+
 #Write a Python program to print alphabet pattern 'L'  
 for i in range(7):
     if i == 6:
-        print("* * * * *")
+        print("* * * * *") # TODO, use 5*"*"
     else:
         print("*")
+# Nel, correct
