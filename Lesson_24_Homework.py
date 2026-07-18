@@ -29,7 +29,7 @@ while a <= 50:
     c = a + b
     a = b
     b = c
-
+# Nel, correct
 
 my_text = "Python 3.13"
 letters = 0
@@ -42,16 +42,16 @@ for char in my_text:
 
 print("Letters", letters)
 print("Digits", digits)
-
+# Nel, correct
 
 for i in range(6): #3
     print("*")
+print("*****") # TODO, just print 5* "*"
 
-print("*****")
 
-
-for i in range(7): #3
+for i in range(7): #3 
     if i == 6:
         print("*****")
     else:
         print("*")
+# Nel correct
