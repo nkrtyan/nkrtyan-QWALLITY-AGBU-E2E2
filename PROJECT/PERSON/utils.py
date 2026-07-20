@@ -1,8 +1,7 @@
 """Create a function get_full_name(name, surname) that takes two arguments and returns the person's full name. 
 Create another function print_person() that retrieves the values from the dictionary and prints the full name. 
 """
-
-from .data import person
+from .data import person #TODO, instead of .data use just data
 
 def get_full_name(name, surname):
      return f"{name} {surname}"
