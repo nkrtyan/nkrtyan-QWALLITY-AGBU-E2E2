@@ -21,3 +21,4 @@ def my_function():
     This is a docstring describing what the function does.
     """
     return True
+    

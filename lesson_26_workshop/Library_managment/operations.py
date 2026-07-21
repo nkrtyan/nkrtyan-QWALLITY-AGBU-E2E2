@@ -12,7 +12,7 @@ def display_books():
             print(f"Year: {info['year']}")
 
 def get_book(title):
-    if title in books_data:
+    if title in books_data.keys():
         print("\nBook information:")
         print("Title:", title)
         print("Author:", books_data[title]["author"])
@@ -22,7 +22,7 @@ def get_book(title):
         print("Book not found.")
 
 def add_book(title, author, pages, year):
-    if title in books_data:
+    if title in books_data.keys():
         print("Book already exists.")
     else:
         books_data[title] = {
