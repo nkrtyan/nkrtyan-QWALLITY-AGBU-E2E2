@@ -1,3 +1,4 @@
-my_number = int(input("input a number: "))
-for i in range(1, 11):
-    print(number, "x", i, "=", number * i)
+
+import sys
+
+print(sys.getdefaultencoding())

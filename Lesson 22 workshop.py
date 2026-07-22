@@ -32,3 +32,8 @@ y = 13.75
 total = int(x) +int(y)
 result =str(total)[::-1]
 print(result)
+
+
+import sys
+
+print(sys.getdefaultencoding())
