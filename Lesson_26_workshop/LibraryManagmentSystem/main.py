@@ -5,37 +5,29 @@ from library.operations import (
     delete_book
 )
 
-while True:
-    print("\n===== Library Management System =====")
-    print("1. View all books")
-    print("2. Get book information")
-    print("3. Add a new book")
-    print("4. Delete a book")
-    print("5. Exit")
+display_books()
 
-    choice = input("Choose an option: ")
 
-    if choice == "1":
-        display_books()
+print("\nAdding new book")
+add_book(
+    "Harry Potter",
+    "J.K Rowling",
+    500,
+    1997
+)
 
-    elif choice == "2":
-        title = input("Enter book title: ")
-        get_book(title)
 
-    elif choice == "3":
-        title = input("Title: ")
-        author = input("Author: ")
-        pages = int(input("Pages: "))
-        year = int(input("Publication year: "))
-        add_book(title, author, pages, year)
+print("\nAll books after adding:")
+display_books()
 
-    elif choice == "4":
-        title = input("Enter book title: ")
-        delete_book(title)
 
-    elif choice == "5":
-        print("Goodbye!")
-        break
+print("\nSearching book:")
+get_book("Շունն ու կատուն")
 
-    else:
-        print("Invalid choice. Try again.")
+
+print("\nDeleting book:")
+delete_book("Harry Potter")
+
+
+print("\nFinal list:")
+display_books()

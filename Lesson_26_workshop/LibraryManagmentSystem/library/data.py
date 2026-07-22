@@ -1,12 +1,12 @@
 books = {
-    "Harry Potter": {
-        "author": "J. K. Rowling",
-        "pages": 400,
-        "year": 1997
+    "Շունն ու կատուն": {
+        "author": "Հ․ Թումանյան",
+        "pages": 10,
+        "year": 1886
     },
-    "The Hobbit": {
-        "author": "J. R. R. Tolkien",
-        "pages": 310,
-        "year": 1937
+    "Ատոմային սովորություններ": {
+        "author": "Ջեյմս Քլիըր",
+        "pages": 248,
+        "year": 2021
     }
 }
