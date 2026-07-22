@@ -1,30 +1,37 @@
 from .data import books
 
 def display_books():
-    if len(books) == 0:
-        print("No books available")
+
+    if books == {}:
+        print("Գրքեր չկան")
+
     else:
-        for title, info in books.items():
+        for book_name in books:
             print("----------------")
-            print("Title:", title)
-            print("Author:", info["author"])
-            print("Pages:", info["pages"])
-            print("Year:", info["year"])
+            print("Անուն:", book_name)
+            print("Հեղինակ:", books[book_name]["author"])
+            print("Էջեր:", books[book_name]["pages"])
+            print("Տարի:", books[book_name]["year"])
 
 
 
 def get_book(title):
+
     if title in books:
-        print(books[title])
+        print("Գիրքը գտնվեց")
+        print("Հեղինակ:", books[title]["author"])
+        print("Էջեր:", books[title]["pages"])
+        print("Տարի:", books[title]["year"])
+
     else:
-        print("Book not found")
+        print("Գիրքը չկա")
 
 
 
 def add_book(title, author, page, year):
 
     if title in books:
-        print("Book already exists")
+        print("Այս գիրքն արդեն կա")
 
     else:
         books[title] = {
@@ -33,7 +40,7 @@ def add_book(title, author, page, year):
             "year": year
         }
 
-        print("Book added successfully")
+        print("Գիրքը ավելացվեց")
 
 
 
@@ -41,7 +48,7 @@ def delete_book(title):
 
     if title in books:
         del books[title]
-        print("Book deleted")
+        print("Գիրքը ջնջվեց")
 
     else:
-        print("Book not found")
+        print("Գիրքը չկա")
