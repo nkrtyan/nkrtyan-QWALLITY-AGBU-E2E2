@@ -15,12 +15,12 @@ f = open("test_file.txt", "r")
 data = f.read()
 print(data)
 f.close()
+# TODO, put the logic inside the fuction and give the file name as an argument
 
-
-
+# TODO, make it function too based on requirement
 letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
 for letter in letters:
     filename = "homework_26/" + letter + ".txt"
     f = open(filename, "w")
     f.close()
+# TODO, recomended to us ewith open instead of just opening and closing file
