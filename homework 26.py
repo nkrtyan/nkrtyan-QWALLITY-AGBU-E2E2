@@ -1,12 +1,12 @@
-#Task 1
-with open("myfile.txt", "a+") as file:
-    file.write("Hello\n")
-    file.write("it's my first file handling!\n")
-    file.seek(0)
-    lines = file.readlines()
+# #Task 1
+# with open("myfile.txt", "a+") as file:
+#     file.write("Hello\n")
+#     file.write("it's my first file handling!\n")
+#     file.seek(0)
+#     lines = file.readlines()
 
-for line in lines:
-    print(line.strip())
+# for line in lines:
+#     print(line.strip())
 
   #Task 2
 def create_files():
