@@ -8,3 +8,5 @@ with open('lesson_26_homework/task1/test.txt', 'a+') as file:
     file_read = file.read()
 
 print(file_read)
+# TODO, no need to commit test.txt file
+# TODO, put this functional inside function and call it

@@ -7,3 +7,4 @@ def generate_files():
         with open(f"lesson_26_homework/task2/{i}.txt", "a"):
             pass
 generate_files()
+# Nel, correct
