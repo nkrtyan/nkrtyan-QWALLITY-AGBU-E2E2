@@ -1,0 +1,8 @@
+Hello
+it's my first file handling!
+Hello
+it's my first file handling!
+Hello
+it's my first file handling!
+Hello
+it's my first file handling!

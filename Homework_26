@@ -1,0 +1,16 @@
+with open("file.txt", "a+") as my_file:
+    lines = ["Hello", "it's my first file handling!"]
+    for line in lines:
+        my_file.write(line + "\n")
+    my_file.seek(0)
+    my_data = my_file.read()
+    print(my_data)
+
+
+def create_file():
+    for i in range(65, 91):
+        file = open(chr(i) + ".txt", "w")
+        file.close()
+        print(chr(i) + ".txt")
+
+create_file()
