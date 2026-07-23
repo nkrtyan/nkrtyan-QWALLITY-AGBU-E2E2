@@ -1,4 +1,2 @@
 Hello
 It's my first file handling!
-Hello
-It's my first file handling!
