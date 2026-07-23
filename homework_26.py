@@ -11,7 +11,9 @@ f.close()
 f1=open("test.file.txt", "r")
 changed_file=f1.read()
 print(changed_file)
+# TODO, code is correct, but put the logic inside function and give filename as an argument
 
 # 2. Write a Python function which generates 26 text files named A.txt, B.txt, and so on up to Z.txt.
+# TODO, finish when have time
 
 
