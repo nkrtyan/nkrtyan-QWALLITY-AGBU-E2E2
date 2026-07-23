@@ -8,3 +8,6 @@ alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 for letter in alphabet:
     file_name= letter + ".txt"
     open(file_name, "w")
+
+# TODO, both tasks should be moved under functions. File name should be given as an argument to the function
+# Nel, code part is correct
