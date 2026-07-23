@@ -1,0 +1,6 @@
+f=open("my_text.txt","+w")
+f.write("hello\ni'ts my first file handling!")
+f.seek(0)
+my_data = f.read()
+print(my_data)
+f.close()
