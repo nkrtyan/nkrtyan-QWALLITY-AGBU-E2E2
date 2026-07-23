@@ -1,8 +1,11 @@
-open("text.txt","w")
+open("text.txt","w") # TODO, extra line
 with open("text.txt","r") as file:
     text=file.read()
     print("\nHello")
-    print("It's my fist file handling")
+    print("It's my fist file handling") 
+# TODO, need to write , after read it
+# TODO, put this functional under function
+
 
 def create_files():
     letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -12,4 +15,4 @@ def create_files():
         print(letter+".txt")
 
 create_files()
-
+# Nel, this function is correct
