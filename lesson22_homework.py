@@ -30,7 +30,7 @@ def bubble_sort(numbers): # TODO, you need to describe how this function work an
             if sorted_list[j] > sorted_list[j + 1]:
                 sorted_list[j], sorted_list[j + 1] = sorted_list[j + 1], sorted_list[j]
     return sorted_list
-
+ 
 
 # Main
 numbers = [23, 5, 67, 12, 89, 1, 45]
