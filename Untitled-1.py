@@ -9,8 +9,6 @@ with open(file_name, "a+") as file:
 print(file_read)
 
 
-
-
 import string
 
 for letter in string.ascii_uppercase:
