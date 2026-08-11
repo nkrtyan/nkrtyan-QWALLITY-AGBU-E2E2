@@ -19,3 +19,8 @@ if __name__=="__main__":
     file_name="New_file"
     text="Workshop information"
     creating_folder(folder_name, file_name, text)
+
+    print(os.getcwd())
+    print(os.path.abspath(__file__))
+    if os.path.isdir("directory"):
+        print("It is a directory")
