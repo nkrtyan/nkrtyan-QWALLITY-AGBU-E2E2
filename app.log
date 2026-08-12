@@ -1,0 +1,16 @@
+2026-08-11 10:19:46,150 - INFO - Program started
+2026-08-11 10:30:36,331 - INFO - Program started
+2026-08-11 10:30:36,332 - INFO - Directory created: ExaminationResults
+2026-08-12 21:15:09,441 - INFO - Program started
+2026-08-12 21:30:45,757 - INFO - Program started
+2026-08-12 21:33:00,004 - INFO - Program started
+2026-08-12 21:38:29,192 - INFO - Program started
+2026-08-12 21:45:21,185 - INFO - Program started
+2026-08-12 21:49:09,248 - INFO - Program started
+2026-08-12 21:49:15,147 - INFO - Program started
+2026-08-12 21:52:58,783 - INFO - Program started
+2026-08-12 21:52:59,253 - INFO - Excel file created: ExaminationResults\results.xlsx
+2026-08-12 22:40:18,277 - INFO - Excel file was created: ExaminationResults\exam_results.xlsx
+2026-08-12 22:40:18,342 - INFO - Number of examined students: 5
+2026-08-12 22:40:18,343 - INFO - Best result: Sophia - 95
+2026-08-12 22:40:18,343 - INFO - Lowest result: Emma - 78
