@@ -14,3 +14,7 @@
 2026-08-12 22:40:18,342 - INFO - Number of examined students: 5
 2026-08-12 22:40:18,343 - INFO - Best result: Sophia - 95
 2026-08-12 22:40:18,343 - INFO - Lowest result: Emma - 78
+2026-08-13 00:50:38,323 [INFO] Excel file created: ExaminationResults\exam_results.xlsx
+2026-08-13 00:50:38,373 [INFO] Number of examined students: 5
+2026-08-13 00:50:38,373 [INFO] Best result: Sophia - 95
+2026-08-13 00:50:38,373 [INFO] Lowest result: Emma - 78
