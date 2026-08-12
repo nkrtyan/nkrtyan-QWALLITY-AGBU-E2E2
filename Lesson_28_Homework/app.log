@@ -1,0 +1,5 @@
+2026-08-12 20:52:33,313 - INFO - Directory created: ExaminationResults
+2026-08-12 20:52:33,737 - INFO - Excel file created: ExaminationResults\exam_results.xlsx
+2026-08-12 20:52:33,799 - INFO - Number of examined students: 5
+2026-08-12 20:52:33,800 - INFO - Best result: Sophia - 95
+2026-08-12 20:52:33,800 - INFO - Lowest result: Emma - 78
