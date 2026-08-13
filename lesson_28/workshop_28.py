@@ -9,6 +9,7 @@ data = {
     "Score": [85, 92, 78, 88, 95]
 }
 
+# TODO, move inside main block
 directory_name="ExaminationResults"
 file_name="exam_results.xlsx"
 
@@ -36,6 +37,7 @@ def create_results_file(directory_name, file_name):
     df.to_excel(file_path, index=False)
     logging.info(f"Excel file '{file_name}' was created.")
 
+# TODO, kep two lines between functions
 def analyze_results(directory_name, file_name):
     file_path = os.path.join(directory_name, file_name)
     df = pandas.read_excel(file_path)
@@ -47,6 +49,7 @@ def analyze_results(directory_name, file_name):
     logging.info(f"Lowest result: {df['Score'].min()}")
     # for i in range(len(df['Name'])):
     #     logging.info(f"Student: {df['Name'][i]}, Score: {df['Score'][i]}")
+    # TODO, do not comment the part which should be worked,  not clear now which part should logg :)
 
 def cleanup(directory_name):
     if os.path.exists(directory_name):
@@ -61,3 +64,4 @@ if __name__ == "__main__":
     create_results_file(directory_name, file_name)
     analyze_results(directory_name, file_name)
     # cleanup(directory_name)
+# TODO, mainly code is correct, pay attanetion to TODO
