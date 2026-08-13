@@ -58,6 +58,7 @@ def analyze_results(directory_name,file_name):
         elif scores[i] == high_score:
            high_score_student.append(names[i])
 
+        # TODO, you can optimize here, using min , max functions
         if scores[i] < low_score:
             low_score = scores[i]
             low_score_student = [names[i]]
@@ -89,8 +90,10 @@ def cleanup(directory_name):
 
 
 if __name__ == "__main__":
+    # TODO, keep dir_name = "ExaminationResults" and pass to all functions
     setup_logging()
     create_directory("ExaminationResults")
     create_results_file("ExaminationResults", "exam_results.xlsx")
     analyze_results("ExaminationResults", "exam_results.xlsx")
     cleanup("ExaminationResults")
+# Nel, good job, working code
