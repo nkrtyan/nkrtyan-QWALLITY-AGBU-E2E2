@@ -1,4 +1,4 @@
-from person import data
+from all_files.Project.person import data
 
 data.dict1
 

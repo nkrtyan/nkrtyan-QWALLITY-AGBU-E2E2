@@ -18,7 +18,7 @@ def setup_logging():
         format='%(asctime)s [%(levelname)s] %(message)s',
         datefmt='%m-%d-%Y', 
         filename='app.log',  
-        filemode='a+',  
+        filemode='w+',  
         encoding='utf-8'  
 )
 

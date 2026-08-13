@@ -1,46 +1,6 @@
-08-11-2026 [INFO] Directory 'ExaminationResults' was created.
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Excel file 'exam_results.xlsx' was created.
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Excel file 'exam_results.xlsx' was created.
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Excel file 'exam_results.xlsx' was created.
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Excel file 'exam_results.xlsx' was created.
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Excel file 'exam_results.xlsx' was created.
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Excel file 'exam_results.xlsx' was created.
-08-11-2026 [INFO] Number of examined students: 5
-08-11-2026 [INFO] Best result: 95
-08-11-2026 [INFO] Lowest result: 78
-08-11-2026 [INFO] Student: Anna, Score: 85
-08-11-2026 [INFO] Student: David, Score: 92
-08-11-2026 [INFO] Student: Emma, Score: 78
-08-11-2026 [INFO] Student: Mark, Score: 88
-08-11-2026 [INFO] Student: Sophia, Score: 95
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Excel file 'exam_results.xlsx' was created.
-08-11-2026 [INFO] Number of examined students: 5
-08-11-2026 [INFO] Best result: 95
-08-11-2026 [INFO] Lowest result: 78
-08-11-2026 [INFO] Student: Anna, Score: 85
-08-11-2026 [INFO] Student: David, Score: 92
-08-11-2026 [INFO] Student: Emma, Score: 78
-08-11-2026 [INFO] Student: Mark, Score: 88
-08-11-2026 [INFO] Student: Sophia, Score: 95
-08-11-2026 [INFO] Directory 'ExaminationResults' already exists.
-08-11-2026 [INFO] Excel file 'exam_results.xlsx' was created.
-08-11-2026 [INFO] Best result: Anna, Score: 85
-08-11-2026 [INFO] Best result: David, Score: 92
-08-11-2026 [INFO] Best result: Emma, Score: 78
-08-11-2026 [INFO] Best result: Mark, Score: 88
-08-11-2026 [INFO] Best result: Sophia, Score: 95
-08-11-2026 [INFO] Lowest result: 78
+08-13-2026 [INFO] ExaminationResults exists.
+08-13-2026 [INFO] The excel file exam_results.xlsx was created
+08-13-2026 [INFO] Number of examined students:5
+08-13-2026 [INFO] Best result: Sophia - 95
+08-13-2026 [INFO] Lowest result: Emma - 78
+08-13-2026 [INFO] Directory ExaminationResults and all its contents have been removed.
