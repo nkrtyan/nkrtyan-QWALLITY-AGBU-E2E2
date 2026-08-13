@@ -50,10 +50,23 @@ def analyze_results(directory_name, file_name):
     logging.info(f'lowest result: {worst_student} -{min_score}')
 
 def cleanup(directory_name):
-    pass
+    user_input = input("Do you want to delete the directory and its contents? (yes/no): ")
+    if user_input.lower() == 'yes':
+        if os.path.exists(directory_name):
+            shutil.rmtree(directory_name)
+            logging.info(f"Directory '{directory_name}' was removed.")
+        else:
+            logging.info(f"Directory '{directory_name}' does not exist.")
+    else:
+        logging.info("Directory removal skipped by user.")
 
 if __name__ == "__main__":
     setup_logging()
     logging.info('Starting the program')
     directory_name = "ExaminationResults"
     file_name = "exam_results.xlsx"
+
+    create_directory(directory_name)
+    create_results_file(directory_name, file_name)
+    analyze_results(directory_name, file_name)
+    cleanup(directory_name)
