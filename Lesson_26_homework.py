@@ -13,7 +13,7 @@ with open("new.txt","w+") as f:
     f.seek(0)
     data=f.read()
     print(data)
-
+# TODO, but the logic inside the function and call it, give file name as an argument
 
 
 # Write a Python function which generates 26 text files named A.txt, B.txt, and so on up to Z.txt.
@@ -22,7 +22,7 @@ for i in range(26):
     letter = chr(65 + i)
     f = open(f"{letter}.txt", "w")
     f.close()
-
+# TODO, the same here, make this logic as an function
 
 
 #  Delete the 26 created files
@@ -30,3 +30,4 @@ for i in range(26):
 # for i in range(26):
 #     letter = chr(65 + i)
 #     os.remove(f"{letter}.txt")
+# TODO, no need to remove after creation directly, you should finish full files creation, after ask from terminal and delete when user confirms.We will talk during lesson
