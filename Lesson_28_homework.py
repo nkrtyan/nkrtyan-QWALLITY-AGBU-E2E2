@@ -16,6 +16,7 @@ def setup_logging():
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S"
+        # TODO, add filemode
     )
 
 # 2. Create Directory
@@ -27,7 +28,7 @@ def create_directory(directory_name="ExaminationResults"):
         logging.info(f"Directory '{directory_name}' already exists.")
 
 # 3. Create Excel File
-def create_excel_file(directory_name="ExaminationResults", file_name="exam_results.xlsx"):
+def create_excel_file(directory_name="ExaminationResults", file_name="exam_results.xlsx"): # TODO, keep variable names inside main block, as you need to use in few places
     file_path = os.path.join(directory_name, file_name)
     df = pd.DataFrame(data)
     df.to_excel(file_path, index=False)
@@ -38,13 +39,11 @@ def create_excel_file(directory_name="ExaminationResults", file_name="exam_resul
 def analyze_results(file_path):
     df = pd.read_excel(file_path)
     
-
     results_df = df[["Name", "Score"]]
-
     total_students = len(results_df)
     
     max_idx = results_df["Score"].idxmax()
-    best_student = results_df.loc[max_idx, "Name"]
+    best_student = results_df.loc[max_idx, "Name"] # TODO, use the methods what you learn, you can research as well, but need to use methods what we have learned
     best_score = results_df.loc[max_idx, "Score"]
     
     min_idx = results_df["Score"].idxmin()
@@ -64,3 +63,5 @@ if __name__ == "__main__":
     create_directory(dir_name)
     file_path = create_excel_file(dir_name, file_name)
     analyze_results(file_path)
+
+# TODO, add cleanup function too
