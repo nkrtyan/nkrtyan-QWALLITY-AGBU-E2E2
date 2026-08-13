@@ -1,5 +1,5 @@
-from Project.person.utils import print_person
-print_person()
+from person.utils import print_person
+if __name__== "__main__": # TODO, I hope you understadn what this line do
+    print_person()
 
-# TODO, create project seperate folder and keep files inside it
-# 
+# Nel, code is correct
