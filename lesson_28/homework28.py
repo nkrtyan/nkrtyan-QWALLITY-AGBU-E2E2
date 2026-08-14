@@ -9,8 +9,7 @@ data = {
         "Score": [85, 92, 78, 88, 95]
         }
 
-directory_name="ExaminationResults"
-file_name="exam_results.xlsx"
+
 
 def setup_logging():
     logging.basicConfig(
@@ -23,6 +22,7 @@ def setup_logging():
 )
 pass
 
+
 def create_directory(directory_name):
     if os.path.exists(directory_name):
         logging.info(f"{directory_name} exists.")
@@ -30,6 +30,7 @@ def create_directory(directory_name):
         os.mkdir(directory_name)
         logging.info(f"{directory_name} was created" )
 pass
+
 
 def create_results_file(directory_name, file_name):
     file_path = os.path.join(directory_name, file_name)
@@ -54,6 +55,7 @@ def analyze_results(directory_name, file_name):
 
 pass
 
+
 def cleanup(directory_name):
     if os.path.exists(directory_name):
         answer=input(f"Do you want remove {directory_name} Y/N")
@@ -63,7 +65,10 @@ def cleanup(directory_name):
 
 pass
 
+
 if __name__ == "__main__":
+    directory_name="ExaminationResults"
+    file_name="exam_results.xlsx"
     setup_logging(),
     create_directory(directory_name),
     create_results_file(directory_name, file_name),
