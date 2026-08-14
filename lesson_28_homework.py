@@ -16,6 +16,7 @@ def setup_logging():
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
         encoding="utf-8",
+        # TODO, add filemode
     )
 
 
@@ -45,7 +46,7 @@ def analyze_results(directory_name, file_name):
     highest_score = scores.max()
     for i in range(len(df)):
         if df["Score"].iloc[i] == highest_score:
-            best_student = df["Name"].iloc[i]
+            best_student = df["Name"].iloc[i] # TODO,good search, hope you can use it again :)
             break
 
     lowest_score = scores.min()
@@ -95,3 +96,4 @@ if __name__ == "__main__":
     create_results_file(target_dir, target_file)
     analyze_results(target_dir, target_file)
     cleanup(target_dir)
+# TODO, correct and working code
