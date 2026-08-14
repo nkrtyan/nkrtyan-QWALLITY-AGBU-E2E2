@@ -14,6 +14,7 @@ def setup_logging():
         level=logging.INFO,
         filename="app.log",
         format="%(asctime)s - %(levelname)s - %(message)s"
+        #  TODO, add filemode
     )
 
 def create_directory(directory_name):
@@ -23,6 +24,7 @@ def create_directory(directory_name):
     else:
         logging.info(f"Directory '{directory_name}' already exists.")
 
+# TODO, keep two lines between functions
 def create_results_file(directory_name, file_name):
     df= pd.DataFrame(data)
     file_path = os.path.join(directory_name, file_name)
@@ -35,9 +37,10 @@ def analyze_results(directory_name, file_name):
     names = df["Name"]
     scores = df["Score"]
     num_students = len(names)
-    highest_score = scores.max()
-    lowest_score = scores.min()
+    highest_score = scores.max() # TODO,  not used
+    lowest_score = scores.min() # TODO,  not used
     logging.info(f"Number of examined students: {num_students}")
+    # TODO,  you should log also best student name, and low student name
     
 # analyze results function is not finished yet
 def cleanup(directory_name):
@@ -60,3 +63,5 @@ if __name__ == "__main__":
     create_results_file(directory_name, file_name)
     analyze_results(directory_name, file_name)
     cleanup(directory_name)
+
+# Nel, mainly code is correct, have a look to TODO
