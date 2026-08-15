@@ -50,7 +50,7 @@ def analyze_results(directory_name, file_name):
     for i in range(len(df)):
         if df["Score"].iloc[i] == lowest_score:
             lowest_student = df["Name"].iloc[i]
-
+l.i
 
 def cleanup(directory_name):
     answer = input("Do you want to remove the directory? (yes/no): ")
