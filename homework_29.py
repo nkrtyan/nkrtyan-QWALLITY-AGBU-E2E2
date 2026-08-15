@@ -9,7 +9,7 @@ class Sport:
         self.name = name
         self.price = price
         self.sessions = sessions
-
+        
 
     def show_data(self):
         print(f"{self.name} - {self.price / self.sessions} AMD per session") 
