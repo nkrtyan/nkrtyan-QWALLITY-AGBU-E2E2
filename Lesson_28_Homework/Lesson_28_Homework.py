@@ -16,6 +16,7 @@ def setup_logging():
         filename="app.log",
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s"
+        # TODO, add filemode
     )
 
 
@@ -66,7 +67,7 @@ def analyze_results(directory_name, file_name):
         f"Lowest result: {lowest_student} - {lowest_score}"
     )
 
-    print(f"Number of examined students: {number_of_students}")
+    print(f"Number of examined students: {number_of_students}") # TODO, no need print as you have in logging
     print(f"Best result: {best_student} - {highest_score}")
     print(f"Lowest result: {lowest_student} - {lowest_score}")
 
@@ -125,3 +126,5 @@ if __name__ == "__main__":
     )
 
     cleanup(directory_name)
+
+# Nel, code is correct, working     
