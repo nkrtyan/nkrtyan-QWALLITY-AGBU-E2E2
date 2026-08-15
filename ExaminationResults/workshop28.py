@@ -3,6 +3,7 @@ import os
 import shutil
 import pandas as pd
 
+
 data = {
     "Name": ["Anna", "David", "Emma", "Mark", "Sophia"],
     "Subject": ["Python", "Python", "Python", "Python", "Python"],
@@ -15,6 +16,7 @@ def setup_logging():
         filename="app.log",
         level=logging.INFO,
         format="%(asctime)s [%(levelname)s] %(message)s"
+        # TODO, need to add filemode
     )
 
 
@@ -22,7 +24,7 @@ def create_directory(directory_name):
     if not os.path.exists(directory_name):
         os.makedirs(directory_name)
         logging.info(f"Directory created: {directory_name}")
-
+    # TODO, add also else branch
 
 def create_results_file(directory_name, file_name):
     file_path = os.path.join(directory_name, file_name)
@@ -72,4 +74,4 @@ if __name__ == "__main__":
     create_results_file(directory, file)
     analyze_results(directory, file)
     cleanup(directory)
-    
+# Nel, good job, working code
