@@ -3,18 +3,19 @@ import shutil
 import logging
 import pandas as pd
 
+# TODO,  keep dict format
 data = {
 "Name": ["Anna", "David", "Emma", "Mark", "Sophia"],
 "Subject": ["Python", "Python", "Python", "Python", "Python"],
 "Score": [85, 92, 78, 88, 95]
 }
+
 def setup_logging():
     logging.basicConfig(
         filename='app.log',
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
         filemode='w+'
-
 
     )
 
@@ -33,6 +34,7 @@ def create_results_file(directory_name, file_name):
     df.to_excel(file_path, index=False)
     logging.info(f"Results file '{file_name}' was created in directory '{directory_name}'.")
 
+# TODO, keep two lines between functions
 def analyze_results(directory_name, file_name):
     file_path = os.path.join(directory_name, file_name)
     df = pd.read_excel(file_path)
@@ -70,3 +72,4 @@ if __name__ == "__main__":
     create_results_file(directory_name, file_name)
     analyze_results(directory_name, file_name)
     cleanup(directory_name)
+# Nel,  correct code
