@@ -21,12 +21,12 @@ def setup_logging():
     )
 
 
-
 def create_directory(directory_name):
     if not os.path.exists(directory_name):
         os.mkdir(directory_name)
         logging.info(f"Directory is created: {directory_name}")
 
+# TODO,  keep two line between  functions
 def create_file(directory_name, file_name):
     file_path = os.path.join(directory_name, file_name)
     df = pandas.DataFrame(data)
@@ -37,19 +37,19 @@ def create_file(directory_name, file_name):
 def analyze_results(directory_name, file_name):
     file_path = os.path.join(directory_name, file_name)
     df = pandas.read_excel(file_path)
-    names = df["Name"]
+    names = df["Name"] # TODO,name  varibale  is  nt used
     scores = df["Score"]
-    total_students = len(df)
+    total_students = len(df) # TODO,  is not used
     highest_score = scores.max()
     lowest_score = scores.min()
-    best_student = ""
+    best_student = "" # TODO,  is not used
     for i in range(len(df)):
         if df["Score"][i] == highest_score:
-            best_student = df["Name"][i]
+            best_student = df["Name"][i] # TODO,  is not used
     lowest_student = ""
     for i in range(len(df)):
         if df["Score"][i] == lowest_score:
-            lowest_student = df["Name"][i]
+            lowest_student = df["Name"][i] # TODO,  is not used
 
 
 def cleanup(directory_name):
@@ -63,7 +63,9 @@ def cleanup(directory_name):
 
 if __name__ == "__main__":
     setup_logging()
+    # TODO,  keep "ExaminationResults" inside any variable and pass tro function
     create_directory("ExaminationResults")
     create_file("ExaminationResults", "exam_results.xlsx")
     analyze_results("ExaminationResults", "exam_results.xlsx")
     cleanup("ExaminationResults")
+# Nel,  mainly orking code,  have  a look to TODO
