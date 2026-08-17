@@ -21,16 +21,17 @@ class Sport:
         return(onesession)
 
 swimming_object = Sport(
-    "swimming",
+    "swimming", # TODO, do not hardcode swimming, get this data from dict
     sport_dic  ["swimming"] ["price"],
     sport_dic  ["swimming"] ["sessions"],
 )
 
 tennis_object = Sport(
-    "tennis",
+    "tennis", # TODO, do not hardcode swimming, get this data from dict
     sport_dic["tennis"] ["price"],
     sport_dic["tennis"] ["sessions"]
 )
 
 print(swimming_object.onesession())
 print(tennis_object.onesession())
+# Nel, OOP is kept, code is working correctly
