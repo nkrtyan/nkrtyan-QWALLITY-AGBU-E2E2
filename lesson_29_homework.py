@@ -1,25 +1,41 @@
 data = {
-    'name': ["Swimming", "Tennis"],
-    'price': [40000, 50000],
-    'number': [16, 10]
+    "Swimming": {
+        "price": 40000,
+        "session": 16
+    },
+
+    "Tennis": {
+        "price": 50000,
+        "session": 10
+    }
 }
 
-class Sport():
-    def __init__(self, name, price, number):
+class Sport:
+    def __init__(self, name, price, sessions):
         self.name = name
         self.price = price
-        self.number = number
+        self.sessions = sessions
+
+    def show_data(self):
+        session_price = self.price / self.sessions
+        print(f"{self.name} - {session_price} AMD per session")
 
 
-    def calculate(self):
-        session_price = self.price / self.number
-        print(f'{self.name} - {session_price} AMD per session')
+sport_objects = []
 
+for sport in data.keys():
 
-swimming_obj = Sport(data['name'][0], data['price'][0], data['number'][0]) # TODO, no need hardcode the index, instead keep each sport like seperate dict inside the dict
-tennis_obj = Sport(data['name'][1], data['price'][1], data['number'][1])
+    sport_obj = Sport(
+        sport,
+        data[sport]["price"],
+        data[sport]["session"]
+    )
 
-swimming_obj.calculate()
-tennis_obj.calculate()
+    sport_objects.append(sport_obj)
+
+for sport_obj in sport_objects:
+    sport_obj.show_data()
 
 # Nel, OOP is correct, correct dict and call
+
+
