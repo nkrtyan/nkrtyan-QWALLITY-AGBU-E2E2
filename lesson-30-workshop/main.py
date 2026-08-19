@@ -5,7 +5,7 @@ def setup_logging():
     logging.basicConfig(
     level=logging.INFO,   
     format='%(asctime)s [%(levelname)s] %(message)s',   
-    filename= "app.log",
+    filename= "info.log",
     filemode='w+',
 )
 

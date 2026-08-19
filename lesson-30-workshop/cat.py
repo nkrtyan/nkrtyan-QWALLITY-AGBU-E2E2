@@ -21,11 +21,8 @@ class Cat(Animal):
 
 
 if __name__ == "__main__":
-    name=input("Input cat name: ")
-    age = int(input("Enter age: "))
-    height = int(input("Enter height: "))
 
-    cat = Cat(name, age, height)
+    cat = Cat("Pupsik", 2, 23)
     cat.showinfo()
     cat.move()
     category = cat.get_category()
