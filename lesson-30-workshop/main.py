@@ -1,4 +1,4 @@
-from classes import Cat
+from animal_classes import Cat
 import logging
 
 def setup_logging():

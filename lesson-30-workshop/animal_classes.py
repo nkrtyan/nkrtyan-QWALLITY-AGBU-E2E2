@@ -14,7 +14,7 @@ class Cat(Animal):
     def get_category(self):
         if self.age<1:
             return f"{self.name} is kitten"
-        elif self.age<10:
+        elif self.age>=1 and self.age<10:
             return f"{self.name} is young cat"
         else:
             return f"{self.name} is adult cat"
