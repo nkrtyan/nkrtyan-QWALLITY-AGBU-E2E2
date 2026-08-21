@@ -18,7 +18,11 @@ class Cat(Animal):
             return f"{self.name} is young cat"
         else:
             return f"{self.name} is adult cat"
+class Mouse(Animal):
+    pass
 
+class Duck(Animal):
+    pass
 
 if __name__ == "__main__":
 
