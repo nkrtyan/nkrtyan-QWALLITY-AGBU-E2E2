@@ -24,13 +24,13 @@ class Sport:
 
 
 swimming_obj = Sport(
-    "Swimming",
+    "Swimming", # TODO,  remove hard code, you should get it from sports dict using sports.keys()
     sports["Swimming"]["price"],
     sports["Swimming"]["sessions"]
 )
 
 tennis_obj = Sport(
-    "Tennis",
+    "Tennis", # TODO,  remove hard code, you should get it from sports dict using sports.keys()
     sports["Tennis"]["price"],
     sports["Tennis"]["sessions"]
 )
@@ -38,3 +38,4 @@ tennis_obj = Sport(
 
 swimming_obj.show()
 tennis_obj.show()
+# Nel, OOP is kept, working code
