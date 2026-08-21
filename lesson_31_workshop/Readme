@@ -1,0 +1,20 @@
+API documentation - https://qwallity-prod.onrender.com/swagger
+
+pip install requests, faker
+
+Main test scenario 
+1. Register non admin user -> Post
+2. Login with registered non admin user -> Post
+3. Add account balance -> Post
+4. Get account balance -> Get
+5. Check that account balance is correct 
+
+
+- data.py: keep test data
+- endponits.py; keep all endpoints 
+
+test cases 
+register_user.py     - register new non admin user
+login_user.py        - login with new registered non admin user
+add_balance.py       - add account balance
+get_balance.py       - get account balance
