@@ -1,0 +1,14 @@
+API documentation - https://qwallity-prod.onrender.com/swagger
+
+Main test scenario
+1. Register User -> Post
+2. Login with registered user -> Post
+3. Add_balance -> Get
+
+- data.py: keep test data
+- endpoints.py keep all endpoints
+
+test cases:
+register_user.py    - register new user
+login.py            - login
+add_balance.py      -add balance
