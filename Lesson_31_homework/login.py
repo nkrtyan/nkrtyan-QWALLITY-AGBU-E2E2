@@ -1,25 +1,21 @@
 import requests
-from requests.auth import HTTPBasicAuth
-import Lesson_31_homework.endpoints as endpoints
+import endpoints
 import data
 
 
-def test_login_user():
-    for attempt in range(10):
+def test_login_user(username, password):
+    login_data = {
+        "username": username,
+        "password": password
+    }
 
-        try:
-            login_response = requests.post(endpoints.login_endpoint, auth=HTTPBasicAuth(username='admin', password='password'))
-            token = login_response.json().get('token')
+    login_response = requests.post(endpoints.login_endpoint, json=login_data, headers=data.headers)
 
-            if token:
-                print("Login successful.")
-                data.headers['Authorization'] = f'Bearer {token}'
-                break
-
-        except requests.RequestException as e:
-            print(e)
-            print(f"Attempt {attempt + 1}: Login failed. Retrying...")
-
-    return data.headers
-
-test_login_user()
+    if login_response.status_code == 200:
+        print("\nLogin successful!")
+        token = login_response.json().get("access_token")
+        return token
+    else:
+        print("\nLogin failed. Status code:", login_response.status_code)
+        print("Response:", login_response.text)
+        return None

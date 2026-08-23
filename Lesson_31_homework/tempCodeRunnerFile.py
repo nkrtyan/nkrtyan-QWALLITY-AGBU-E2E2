@@ -4,7 +4,7 @@ import requests
 
 
 def test_register_user():
-    register_data = data.register_body()
+    register_data = data.register_body
     username = register_data["username"]
     password = register_data["password"]
 
@@ -28,3 +28,5 @@ def test_register_user():
             print(f"Attempt {attempt + 1}: Register failed. Retrying...")
 
     return username, password
+
+test_register_user()
