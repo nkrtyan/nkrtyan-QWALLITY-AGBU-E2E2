@@ -7,7 +7,7 @@ def test_get_balance(headers):
     for attempt in range(10):
 
         try:
-            get_balance_response = requests.get(endpoints.get_balance_endpoint, headers=data.headers)
+            get_balance_response = requests.get(endpoints.get_balance_endpoint, headers=headers)
 
 
             if get_balance_response.status_code == 200:

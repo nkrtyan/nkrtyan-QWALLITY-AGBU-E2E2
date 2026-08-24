@@ -1,0 +1,10 @@
+2026-08-24 21:45:27,958 [INFO] User registered successfully!
+2026-08-24 21:45:27,959 [INFO] Username - hernandezmarissa
+2026-08-24 21:45:27,959 [INFO] Password - @4Wx8AHm
+2026-08-24 21:45:29,935 [INFO] Login successful.
+2026-08-24 21:45:30,439 [INFO] Balance added successfully.
+2026-08-24 21:45:30,439 [INFO] {'message': 'Payment is done'}
+2026-08-24 21:45:30,972 [INFO] Successfully got the balance!
+2026-08-24 21:45:30,973 [INFO] Current balance - 1045
+2026-08-24 21:45:30,973 [INFO] Balance check passed!
+2026-08-24 21:45:30,974 [INFO] Test scenario is finished successfuly

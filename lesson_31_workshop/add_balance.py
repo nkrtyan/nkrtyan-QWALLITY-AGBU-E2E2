@@ -10,7 +10,7 @@ def test_add_balance(headers):
     for attempt in range(10):
 
         try:
-            add_balance_response = requests.post(endpoints.add_balance_endpoint, json=balance_data, headers=data.headers)
+            add_balance_response = requests.post(endpoints.add_balance_endpoint, json=balance_data, headers=headers)
 
 
             if add_balance_response.status_code == 200:
