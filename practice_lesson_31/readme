@@ -1,0 +1,24 @@
+API Documentation https://qwallity-prod.onrender.com/swagger/
+
+Main test scenario
+1. Register non admin user               -> POST request
+2. Login with registered admin user      -> POST request 
+3. Add fundamental course                -> POST request
+4. Check if the added fundamental course in list -> Get request
+5. Delete added course -> Del request
+
+main files
+
+data.py 
+endpoints.py 
+
+test cases
+register.py 
+login_admin.py
+add_course.py
+check_course.py
+del_course.py
+
+
+calles
+main.py 

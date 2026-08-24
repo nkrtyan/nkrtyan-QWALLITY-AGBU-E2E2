@@ -1,0 +1,17 @@
+API Documantation - https://qwallity-prod.onrender.com/swagger/
+
+Main test scenario
+1. Register non admin user               -> POST request
+2. Login with registered non admin user  -> POST request 
+3. Add account balance                   -> POST request
+4. Check that account balance is correct -> GET request
+
+- data.py - test data
+- endpoints.py - all endpoints
+
+test cases
+Register_user.py -      Register new non admin user
+nonadmin_login.py -     Login with the created non admin user
+add_balance.py -        Adding account balance
+checking_balance.py -   Check that account balance is correct
+

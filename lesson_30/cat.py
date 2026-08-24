@@ -34,6 +34,7 @@ class Duck(Animal):
 
 
 
+
 obj_animal = Animal('Generic Animal')
 obj_cat = Cat('Joe', 5, 30)
 obj_mouse = Mouse('Jerry', 1, 10)

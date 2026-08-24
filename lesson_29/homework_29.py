@@ -5,6 +5,8 @@ data= {
     "price": [40000, 50000],
     "number_sessions": [16, 10]
 }
+
+
 # TODO, keep dict like sport_1 and data (dict value, like sport_name:Swimming, price:40000, number_of_session:16)
 
 class Sport():

@@ -1,0 +1,5 @@
+register_endpoint = "https://qwallity-prod.onrender.com/register/api"
+login_endpoint = "https://qwallity-prod.onrender.com/login/api"
+add_course_endpoint = "https://qwallity-prod.onrender.com/add_course/api"
+check_course_endpoint = "https://qwallity-prod.onrender.com/courses/fundamental/api"
+delete_course_endpoint = f"https://qwallity-prod.onrender.com/courses/course/%s"
