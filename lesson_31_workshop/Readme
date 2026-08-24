@@ -11,7 +11,8 @@ Main test scenario
 
 
 - data.py: keep test data
-- endponits.py; keep all endpoints 
+- endponits.py: keep all endpoints 
+- logger_config.py: keep logging setup 
 
 test cases 
 register_user.py     - register new non admin user

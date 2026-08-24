@@ -1,6 +1,7 @@
 import requests
 import endpoints
 import data
+from logger_config import logger
 
 def test_login_user(username, password):
     login_body = {
@@ -16,13 +17,17 @@ def test_login_user(username, password):
             token = login_reponse.json().get('token')
 
             if token:
-                print("Login successful.")
+                # print("Login successful.")
+                logger.info("Login successful.")
                 data.headers['Authorization'] = f'Bearer {token}'
                 break
 
         except requests.RequestException as e:
-            print(e)
-            print(f"Attempt {attempt +1}: Login failed. Retrying...")
+            logger.info({e})
+            logger.error(f"Attempt {attempt +1}: Login failed. Retrying...")
+
+            # print(e)
+            # print(f"Attempt {attempt +1}: Login failed. Retrying...")
 
     return data.headers
 
