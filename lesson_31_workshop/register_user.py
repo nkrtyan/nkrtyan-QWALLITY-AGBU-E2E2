@@ -2,7 +2,6 @@ import endpoints
 import data
 import requests
 
-
 def test_register_user():
     register_data = data.register_body
     username = register_data["username"]
@@ -17,15 +16,13 @@ def test_register_user():
                 print(register_user_response.json())
                 print("Username - ", username)
                 print("Password - ", password)
-            else:
-                print("Failed to register user, Status code: ", register_user_response.status_code)
-                print("Response: ", register_user_response.text)
-            break
+                break
 
-        except register_user_response as e:
+        except requests.exceptions.RequestException as e:
             print(e)
             print(f"Attempt {attempt + 1}: Register failed. Retrying...")
 
     return username, password
 
-test_register_user()
+if __name__ == "__main__":
+    test_register_user()

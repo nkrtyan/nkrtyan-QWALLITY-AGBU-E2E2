@@ -1,20 +1,22 @@
 import endpoints
-import json
 import requests
+import data
 
 def test_get_balance(headers):
     for attempt in range(10):
 
         try:
-            get_balance_response = requests.get(endpoints.get_balance_endponit, headers=headers)
+            get_balance_response = requests.get(endpoints.get_balance_endpoint, headers=data.headers)
 
-            if get_balance_response:
-                all_found_balances = json.loads(get_balance_response.text)
 
-                for i in all_found_balances["result"]:
-                    if int() == i["id"]:
-                        print("text")
-                        break
+            if get_balance_response.status_code == 200:
+                response_data = get_balance_response.json()
+                actual_balance = response_data.get("balance")
+                print("Balance retrieved successfully!")
+                print("Current balance - ", actual_balance)
+                print("Balance check passed!")
                 break
-        except requests.RequestException:
-            print(f'Attempt {attempt + 1}: Login failed. Retrying...')
+
+        except requests.RequestException as e:
+            print(e)
+            print(f"Attempt {attempt + 1}: Check balance failed. Retrying...")

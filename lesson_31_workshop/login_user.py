@@ -1,13 +1,18 @@
 import requests
-from requests.auth import HTTPBasicAuth
 import endpoints
 import data
 
-def test_login_user():
+def test_login_user(username, password):
+    login_body = {
+        "username": username,
+        "password": password
+    }
+    
+
     for attempt in range(10):
 
         try:
-            login_reponse = requests.post(endpoints.login_endpoint, auth=HTTPBasicAuth(username="non_admin_user", password="11111111"))
+            login_reponse = requests.post(endpoints.login_endpoint, json=login_body)
             token = login_reponse.json().get('token')
 
             if token:
@@ -21,5 +26,12 @@ def test_login_user():
 
     return data.headers
 
-test_login_user()
+if __name__ == "__main__":
+    from register_user import test_register_user
+
+    #Գրանցում ենք
+    user, pwd = test_register_user()
     
+    #Մուտք ենք գործում
+    token = test_login_user(user, pwd)
+    print("Received Token:", token)
