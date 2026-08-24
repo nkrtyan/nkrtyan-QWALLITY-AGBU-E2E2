@@ -9,3 +9,9 @@ class Animal:
 
     def move(self):
         print(f"{self.name} is running")
+
+
+if __name__ == "__main__":
+    obj1 = Animal("joe")
+    
+    
