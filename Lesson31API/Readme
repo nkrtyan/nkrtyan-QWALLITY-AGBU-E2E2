@@ -1,0 +1,19 @@
+API documentation - https://qwallity-prod.onrender.com/swagger
+
+pip install requests , fake
+
+ Main test scenario
+ 1. Register user -> post
+ 2. Login with registered user-> post
+ 3. Add Account balance-> post
+ 4. check that Account balance is correct->get
+
+
+- api_collection.py keep all endpoints
+- Lesson_31.py  keep test data
+
+ Test cases :
+ register_user.py    - register new user
+ login.py            - login
+ add_account_balance - add  balance
+ check_that_account_balance_iscorrect - check account balance
