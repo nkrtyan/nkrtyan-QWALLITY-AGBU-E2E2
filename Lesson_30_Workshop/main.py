@@ -3,9 +3,7 @@ from mouse import Mouse
 from duck import Duck
 
 cat = Cat("Katy", 2, 22)
-
 mouse = Mouse("Mickey")
-
 duck = Duck("Donald")
 
 print("CAT")
