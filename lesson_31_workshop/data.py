@@ -11,7 +11,7 @@ register_body = {
                 "username": fake.user_name(),
                 "password": fake.password(length=8),
                 "role_id": 2,
-                "account": fake.random_int(min=20, max=100)
+                "account": 100
                 }
 
 balance_body= {

@@ -1,33 +1,26 @@
 import requests
 import endpoints
 import data
-from logger_config import logger
+import logging
+from requests.auth import HTTPBasicAuth
 
 def test_login_user(username, password):
-    login_body = {
-        "username": username,
-        "password": password
-    }
-    
 
     for attempt in range(10):
 
         try:
-            login_reponse = requests.post(endpoints.login_endpoint, json=login_body)
+            login_reponse = requests.post(endpoints.login_endpoint, auth=HTTPBasicAuth(username=username, password=password))
+
             token = login_reponse.json().get('token')
 
             if token:
-                # print("Login successful.")
-                logger.info("Login successful.")
+                logging.info("Login successful.")
                 data.headers['Authorization'] = f'Bearer {token}'
                 break
 
         except requests.RequestException as e:
-            logger.info({e})
-            logger.error(f"Attempt {attempt +1}: Login failed. Retrying...")
-
-            # print(e)
-            # print(f"Attempt {attempt +1}: Login failed. Retrying...")
+            logging.info({e})
+            logging.error(f"Attempt {attempt +1}: Login failed. Retrying...")
 
     return data.headers
 
