@@ -11,7 +11,7 @@ def test_register_user():
     register_data = data.register_body
     username = register_data["username"]
     password = register_data["password"]
-    # account = register_data["account"]
+    account = register_data["account"]
 
 
     for attempt in range(10):
@@ -20,10 +20,14 @@ def test_register_user():
 
 
             if register_user_response.status_code == 201:
-                logging.info("User registered successfully")
+                logging.info("User registered successfully. Username: %s | Password: %s | Account: %s",
+                             username,
+                             password,
+                             account)
                 logging.info(register_user_response.json())
-                logging.info("Username -" ,username)
-                logging.info("Password -" ,password)
+                # logging.info("Username -" ,username)
+                # logging.info("Password -" ,password)
+                # logging.info("Account - ", account)
 
                 
             else:
@@ -36,7 +40,7 @@ def test_register_user():
             print(e)
             print (f"Attemt {attempt + 1}: Register failed. Trying... ")
 
-    return username, password
+    return username, password, account
 
 if __name__=="__main__":
     test_register_user()

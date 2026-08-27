@@ -1,8 +1,0 @@
-08-27-2026 [INFO] User registered successfully
-08-27-2026 [INFO] {'message': 'User is created', 'user_id': 446390914}
-08-27-2026 [INFO] Login succesfull
-08-27-2026 [INFO] Balance was added successfully
-08-27-2026 [INFO] {'message': 'Payment is done'}
-08-27-2026 [INFO] Balance updated successfuly
-08-27-2026 [ERROR] balance wasn't updated
-08-27-2026 [INFO] Test scenario finished successfully

@@ -2,13 +2,13 @@ import endpoints
 import data
 import requests
 from requests.auth import HTTPBasicAuth
-from register_user import test_register_user
+# from register_user import test_register_user
 import logging
 from logging_conf import setup_logging
 
 setup_logging()
 
-username, password = test_register_user()
+# username, password = test_register_user()
 
 def test_login_user(username, password):
     for attempt in range(10):
@@ -28,4 +28,5 @@ def test_login_user(username, password):
     return data.headers
 
 if __name__ == "__main__":
-    test_login_user(username, password)         
+    pass
+    # test_login_user(username, password)         
