@@ -7,7 +7,9 @@ headers = {
 }
 
 first_name = fake.first_name()
+
 username = f"{first_name.lower()}_{fake.random_int(100, 999)}"
+
 password = fake.password(length=8)
 
 register_body = {
