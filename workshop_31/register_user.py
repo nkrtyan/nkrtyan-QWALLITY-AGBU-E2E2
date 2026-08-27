@@ -1,38 +1,42 @@
 import data
 import endpoints
 import requests
+import logging
 from logging_conf import setup_logging
+
+
+setup_logging()
 
 def test_register_user():
     register_data = data.register_body
     username = register_data["username"]
     password = register_data["password"]
-    account = register_data["account"]
+    # account = register_data["account"]
 
 
     for attempt in range(10):
         try:
             register_user_response = requests.post(endpoints.register_endpoint, json=register_data, headers=data.headers)
 
-            if register_user_response:
-                if register_user_response.status_code == 200:
-                    print("User registered successfully")
-                    print(register_user_response.json())
-                    print("Username -" ,username)
-                    print("Password -" ,password)
 
-                    
-                else:
-                    print("Registration is failed. Status code: " ,register_user_response.status_code)
-                    print("Registration response: " ,register_user_response.text)
+            if register_user_response.status_code == 201:
+                logging.info("User registered successfully")
+                logging.info(register_user_response.json())
+                logging.info("Username -" ,username)
+                logging.info("Password -" ,password)
 
-                break
+                
+            else:
+                logging.error("Registration is failed. Status code: " ,register_user_response.status_code)
+                logging.error("Registration response: " ,register_user_response.text)
+
+            break
 
         except requests.RequestException as e:
             print(e)
             print (f"Attemt {attempt + 1}: Register failed. Trying... ")
 
-    return username, password, account 
+    return username, password
 
 if __name__=="__main__":
     test_register_user()

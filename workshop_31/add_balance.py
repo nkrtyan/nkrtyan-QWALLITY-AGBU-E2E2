@@ -1,6 +1,10 @@
 import data
 import requests
 import endpoints
+import logging
+from logging_conf import setup_logging
+
+setup_logging()
 
 def test_add_balance(headers):
     balance_data = data.add_amount
@@ -11,13 +15,13 @@ def test_add_balance(headers):
             add_balance = requests.post(endpoints.add_balance_endpoint, json=balance_data, headers=headers)
             
             if add_balance.status_code == 200:
-                print("Balance was added successfully")
-                print(add_balance.json())
+                logging.info("Balance was added successfully")
+                logging.info(add_balance.json())
                 break
 
             else:
-                print("Adding balance failed. Status code: " ,add_balance.status_code)
-                print("Response:", add_balance.text)
+                logging.error("Adding balance failed. Status code: " ,add_balance.status_code)
+                logging.error("Response:", add_balance.text)
 
         except requests.RequestException as e:
             print(e)

@@ -1,7 +1,10 @@
 import endpoints
 import requests
+import logging
+from logging_conf import setup_logging
 
 
+setup_logging()
 
 def test_check_balance(headers):
     for attempt in range(10):
@@ -11,8 +14,8 @@ def test_check_balance(headers):
             if get_added_balance_response.status_code == 200:
                 amount = get_added_balance_response.json()
                 current_balance = amount.get("balance")
-                print("Balance updated successfuly")
-                print("Current balance", current_balance)
+                logging.info("Balance updated successfuly")
+                logging.info("Current balance", current_balance)
                 break
 
         except requests.RequestException as e:
