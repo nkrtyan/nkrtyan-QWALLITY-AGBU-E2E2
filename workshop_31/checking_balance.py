@@ -19,7 +19,7 @@ def test_check_balance(headers):
                 break
 
         except requests.RequestException as e:
-            print(f"Attempt {attempt + 1}: Check balance failed. Retrying...")
-            print(e)
+            logging.error(f"Attempt {attempt + 1}: Check balance failed. Retrying...")
+            logging.error(e)
 
     return current_balance

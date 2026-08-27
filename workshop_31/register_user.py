@@ -25,9 +25,6 @@ def test_register_user():
                              password,
                              account)
                 logging.info(register_user_response.json())
-                # logging.info("Username -" ,username)
-                # logging.info("Password -" ,password)
-                # logging.info("Account - ", account)
 
                 
             else:
@@ -37,8 +34,8 @@ def test_register_user():
             break
 
         except requests.RequestException as e:
-            print(e)
-            print (f"Attemt {attempt + 1}: Register failed. Trying... ")
+            logging.error(e)
+            logging.error(f"Attempt {attempt + 1}: Register failed. Trying... ")
 
     return username, password, account
 

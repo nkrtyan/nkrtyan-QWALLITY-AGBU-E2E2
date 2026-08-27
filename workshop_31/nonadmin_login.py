@@ -22,8 +22,8 @@ def test_login_user(username, password):
                 break
 
         except requests.RequestException as e:
-            print(e)
-            print((f"Attempt {attempt + 1}: Login failed. Try again... "))
+            logging.error(e)
+            logging.error((f"Attempt {attempt + 1}: Login failed. Try again... "))
 
     return data.headers
 

@@ -1,5 +1,7 @@
 API Documantation - https://qwallity-prod.onrender.com/swagger/
 
+pip install faker, requests
+
 Main test scenario
 1. Register non admin user               -> POST request
 2. Login with registered non admin user  -> POST request 

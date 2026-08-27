@@ -24,8 +24,8 @@ def test_add_balance(headers):
                 logging.error("Response:", add_balance.text)
 
         except requests.RequestException as e:
-            print(e)
-            print(f"Attempt {attempt+1} failed. Retrying...")
+            logging.error(e)
+            logging.error(f"Attempt {attempt+1} failed. Retrying...")
 
     return add_ammount
 
