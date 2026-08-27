@@ -15,7 +15,7 @@ register_body = {
 }
 
 add_amount = {
-                "amount": 100,
+                "amount": 200,
                 "payment": "cash",
                 "card_num": 0,
                 "exp_date": "2026/09/30",

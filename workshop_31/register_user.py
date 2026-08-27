@@ -1,12 +1,14 @@
 import data
 import endpoints
 import requests
-
+from logging_conf import setup_logging
 
 def test_register_user():
     register_data = data.register_body
     username = register_data["username"]
     password = register_data["password"]
+    account = register_data["account"]
+
 
     for attempt in range(10):
         try:
@@ -19,8 +21,7 @@ def test_register_user():
                     print("Username -" ,username)
                     print("Password -" ,password)
 
-                    return username, password
-
+                    
                 else:
                     print("Registration is failed. Status code: " ,register_user_response.status_code)
                     print("Registration response: " ,register_user_response.text)
@@ -31,7 +32,8 @@ def test_register_user():
             print(e)
             print (f"Attemt {attempt + 1}: Register failed. Trying... ")
 
-    return None, None
+    return username, password, account 
 
-# test_register_user()
+if __name__=="__main__":
+    test_register_user()
 

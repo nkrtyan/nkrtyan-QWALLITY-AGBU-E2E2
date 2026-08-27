@@ -23,4 +23,5 @@ def test_login_user(username, password):
 
     return data.headers
 
-test_login_user(username, password)         
+if __name__ == "__main__":
+    test_login_user(username, password)         
