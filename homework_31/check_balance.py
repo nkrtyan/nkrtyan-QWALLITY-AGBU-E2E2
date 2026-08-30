@@ -1,6 +1,7 @@
 import requests
 import endpoints
 import data
+import logging
 
 
 def get_current_balance():
@@ -25,12 +26,13 @@ def test_check_balance(balance_before):
                 assert actual_balance == expected_balance, (
                     f"Expected balance {expected_balance}, but got {actual_balance}"
                 )
+                logging.info(f"Balance check passed: {actual_balance}")
                 print("Balance check passed!")
             else:
+                logging.error(f"Check balance failed: {check_balance_response.status_code} {check_balance_response.text}")
                 print("Failed to get balance. Status code:", check_balance_response.status_code)
-                print("Response:", check_balance_response.text)
             break
 
         except requests.RequestException as e:
+            logging.warning(f"Attempt {attempt + 1}: check balance request failed - {e}")
             print(e)
-            print(f"Attempt {attempt + 1}: Check balance failed. Retrying...")

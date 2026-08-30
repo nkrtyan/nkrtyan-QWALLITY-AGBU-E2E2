@@ -13,3 +13,8 @@ def test_full_balance_flow():
 
 
 test_full_balance_flow()
+
+import os
+os.system("type homework_31.log")
+
+print(open("homework_31.log").read())

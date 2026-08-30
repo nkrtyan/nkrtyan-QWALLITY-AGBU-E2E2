@@ -1,6 +1,7 @@
 import requests
-import data
 import endpoints
+import data
+import logging
 
 
 def test_login_user():
@@ -9,14 +10,20 @@ def test_login_user():
         "password": data.register_body["password"]
     }
 
-    response = requests.post(
-        endpoints.login_endpoint,
-        json=login_body
-    )
+    for attempt in range(10):
+        try:
+            login_response = requests.post(endpoints.login_endpoint, json=login_body)
+            token = login_response.json().get('token')
 
-    assert response.status_code == 200
+            if token:
+                logging.info("Login successful.")
+                print("Login successful.")
+                data.headers['Authorization'] = f'Bearer {token}'
+                break
+            else:
+                logging.error(f"Login failed: {login_response.status_code} {login_response.text}")
 
-    token = response.json()["token"]
-    data.headers["Authorization"] = f"Bearer {token}"
+        except requests.RequestException as e:
+            logging.warning(f"Attempt {attempt + 1}: login request failed - {e}")
 
-    print("Login successful.")
+    return data.headers

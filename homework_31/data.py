@@ -1,4 +1,15 @@
 from faker import Faker
+import logging
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s [%(levelname)s] %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S',
+    filename='homework_31.log',
+    filemode='a',
+    encoding='utf-8')
+
+
 
 fake = Faker()
 
@@ -24,4 +35,3 @@ add_balance_body = {
     "card_cvv": fake.credit_card_security_code()
 }
 
-expected_balance = register_body["account"] + add_balance_body["amount"]
