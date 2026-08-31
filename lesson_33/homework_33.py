@@ -15,6 +15,7 @@ import time
 
 
 def call_test(my_driver):
+    # TODO, add browser checking inside function, if chrome, open that driver, if other open the other, but if we dont have such browser raise exception
     my_driver.maximize_window()
 
     my_driver.get("https://www.python.org/")
@@ -40,5 +41,6 @@ def call_test(my_driver):
 
     my_driver.close()
 
+# TODO, add main block and caal the function once, just pass browser name to function
 call_test(webdriver.Chrome())
 call_test(webdriver.Firefox())
