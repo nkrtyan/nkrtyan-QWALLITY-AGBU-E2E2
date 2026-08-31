@@ -15,6 +15,10 @@ def qa_testing(browser):
     assert "No results found" in page_text
     print(f"{driver.name} test passed")
     driver.quit()
+
+# TODO, add main block
 for browser in browsers:
     qa_testing(browser)
+
 print("Success")
+# Nel, good job
