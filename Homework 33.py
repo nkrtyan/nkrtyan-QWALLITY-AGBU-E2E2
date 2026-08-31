@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 
 
-def test(driver):
+def test(driver): # TODO, function name is not informative
     driver.get("https://www.python.org/")
     driver.maximize_window()
 
@@ -24,4 +24,4 @@ def test(driver):
     
     driver.close()
 
-test(webdriver.Chrome())
+test(webdriver.Chrome()) # TODO, this will work only for chrome, but requirements says to run for few browsers
