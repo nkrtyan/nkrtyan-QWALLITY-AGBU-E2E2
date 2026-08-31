@@ -5,7 +5,6 @@ import time
  
 browsers = ["chrome", "firefox"]
  
- 
 def negative_search_test(browser_name, search_term="blabla"):
     """Open python.org on the given browser, search for a term that
     should return no results, and check that 'No results found.' is shown."""
@@ -49,4 +48,6 @@ def negative_search_test(browser_name, search_term="blabla"):
  
 for browser_name in browsers:
     negative_search_test(browser_name)
+
+#  great job, no comments :)
  
