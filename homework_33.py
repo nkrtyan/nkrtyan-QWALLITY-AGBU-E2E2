@@ -3,13 +3,13 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 browsers = ["chrome", "edge"]
-
+# TODO, move the logic under function
 for browser in browsers:
     if browser == "chrome":
         driver = webdriver.Chrome()
     elif browser == "edge":
         driver = webdriver.Edge()
-
+    # TODO, add logic in case when the browser does not support
     try:
         driver.maximize_window()
 
@@ -35,3 +35,4 @@ for browser in browsers:
 
     finally:
         driver.quit()
+# TODO,  you should have main block, where call the function and pass the browser list- browsers
