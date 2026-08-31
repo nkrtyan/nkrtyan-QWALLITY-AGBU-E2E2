@@ -4,6 +4,7 @@ import time
 
 
 def test(driver):
+    # TODO, need to check here which broser, after open driver. Also add checking if unsuported browser, raise exception
     driver.get("https://www.python.org/")
     driver.maximize_window()
 
@@ -24,5 +25,6 @@ def test(driver):
     
     driver.close()
 
+# TODO, add main block, and give list of browsers, based on for cycle pass driver to function, no need to repeat function call
 test(webdriver.Chrome())
 test(webdriver.Firefox())
