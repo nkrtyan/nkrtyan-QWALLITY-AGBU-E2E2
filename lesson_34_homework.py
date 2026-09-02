@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 browsers = ["chrome"]
 
-def counter(browser):
+def get_elements(browser):
     
     if browser == "chrome":
         driver = webdriver.Chrome()
@@ -28,21 +28,28 @@ def counter(browser):
 
         actions = [radio, checkbox,open_tab,selectors ,btn,hide,alert,hover,table]
 
-        count = 0
-
-        for item in actions:
-            count += len(item)
-
-        print(count)
+        return actions
+        
 
     except Exception as error:
         print(f"[{browser}] Test ERROR: {error}")
 
+    finally:
+        driver.quit()
     
-    driver.quit()
+    
+def counter(actions):
+    count = 0
+    for item in actions:
+        count += len(item)
+
+    print(count)
+
+    
 
 if __name__ == "__main__":
 
     for browser in browsers:
         print(f"Running test on: {browser}")
-        counter(browser)
+        actions = get_elements(browser)
+        counter(actions)
