@@ -1,6 +1,7 @@
 from selenium import webdriver # practise
 import time
 
+# TODO,  this should be moved under function and pass browser name as an argument
 my_driver = webdriver.Chrome()
 my_driver.maximize_window()
 my_driver.get("https://www.python.org/")
@@ -13,7 +14,7 @@ print("success")
 
 
 
-
+# TODO, no need keep few options, solve in one option,  move all imports at the above
 from selenium import webdriver # Option 1
 from selenium.webdriver.common.by import By
 
@@ -71,6 +72,7 @@ for driver in browsers:
 
 print("Success")
 
+<<<<<<< HEAD
 
 
 
@@ -118,3 +120,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# TODO, i dont see main block, where you should call you function with logic. that function should get browser name 
+# TODO, in case if the browser does not support, you will get error, so need to develop
