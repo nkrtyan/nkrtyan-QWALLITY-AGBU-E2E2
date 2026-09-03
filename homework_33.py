@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 def test(driver):
+    # TODO, here you should have checking regarding browser, which browser given, that driver is opening . Also add checking if the browser does not supported
     driver.get("https://python.org")
     driver.maximize_window()
     driver.implicitly_wait(5)
@@ -24,5 +25,6 @@ def test(driver):
         
     driver.quit()
 
+# TODO, no need call the same function twice, you need to call it once and pass driver
 test(webdriver.Chrome())
 test(webdriver.Firefox())
