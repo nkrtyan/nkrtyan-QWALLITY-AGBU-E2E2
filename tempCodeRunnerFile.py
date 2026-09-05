@@ -1,0 +1,5 @@
+driver = webdriver.Chrome()
+# # driver.get("https://www.python.org/")
+# driver.get("https://www.letskodeit.com/practice")
+# driver.maximize_window()
+# driver.set_page_load_timeout(60)
