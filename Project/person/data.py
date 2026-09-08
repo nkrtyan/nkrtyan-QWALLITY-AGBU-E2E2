@@ -1,4 +1,4 @@
-person_data = {
-    "name": "Syuzanna"
-    "surname": "Stepanyan"
+my_dict = {
+    "name": "Siranush",
+    "surname": "Avetisyan"
 }

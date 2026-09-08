@@ -1,12 +1,11 @@
-from person.data import person_data
+from Project.person import data
 
-
+#TODO, keep two empty lines between functions
 def get_full_name(name, surname):
-    return f"{name} {surname}"
+    return name, surname
 
 
 def print_person():
-    name = person_data["name"]
-    surname = person_data["surname"]
-    full_name = get_full_name(name,surname)
-    print(full_name)
+    person_data = data.my_dict
+    name, surname = get_full_name(person_data['name'], person_data['surname'])
+    print(f"{name} {surname}")

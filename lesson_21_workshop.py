@@ -1,8 +1,7 @@
-print("It's my first program!")
-# My first python program
-print("Syuzanna Stepanyan\n")
-print("I am learning QA")
-num1 = 10
-num2 = 20
-total_sum = num1 + num2
-print(total_sum)
+print("It's my first program")
+print("Siranush Avetisyan")
+print()
+print("Faculty of informatics and applied mathematics")
+x = 9
+y = 2
+print(x + y) #workshop
