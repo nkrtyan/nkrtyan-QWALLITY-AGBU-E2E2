@@ -13,10 +13,10 @@ class Cat(Animal):
         print(f"Height: {self.height}")
 
 class Duck(Animal):
-    def __init__(self, name, age, height):
+    def __init__(self, name, age, color):
            super().__init__(name)
            self.age = age
-           self.height = height
+           self.height = color
 
 
 class Mouse(Animal):
@@ -38,3 +38,21 @@ duck1.showinfo()
 duck1.move()
 mouse1.showinfo()
 mouse1.move()
+
+# class Duck(Animal):
+#     def move(self):
+#         print(f"{self.name} is swimming")
+
+# class Mouse(Animal):
+#     def move(self):
+#         print(f"{self.name} is running")
+
+
+# cat1 = Cat("Simba", 3, 5)
+# duck1 = Duck("Donald")
+# mouse1 = Mouse("Jerry")
+
+# cat1.showinfo()
+# cat1.move()
+# duck1.move()
+# mouse1.move()
