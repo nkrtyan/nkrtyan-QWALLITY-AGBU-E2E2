@@ -1,67 +1,39 @@
-import sys
-from pathlib import Path
-
-from Helpers.lib import Helper
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from Helpers.lib import Helper, ElementHelper, WaitHelper, save_to_file, scroll_to_element, hover_element, wait_for_element_visible, open_new_tab_and_switch
+from Helpers.lib import Helper, ElementHelper
 
 class LetsKodeitMainPage:
-
     open_alert = (By.ID, 'alertbtn')
-    element = (By.ID, "displayed-text")
+    element_locator = (By.ID, "displayed-text")
     hover_btn = (By.XPATH, '//button[@id="mousehover"]')
     top_btn = (By.XPATH, '//a[@href="#top"]')
-    footer = (By.XPATH,"//p[contains(@class, 'jqCopyRight')]")
-    signin_btn = (By.XPATH, '//a[@href="/login"]')
-
-    email_input = (By.XPATH, "//input[@name='email']")
-    password_input = (By.XPATH, "//input[@name='password']")
-    submit_login_btn = (By.XPATH, "//button[@id='login']")
-    error_msg_locator = (By.XPATH, "//span[@id='incorrectdetails']")
+    footer = (By.XPATH, "//p[contains(@class, 'jqCopyRight')]")
 
     def __init__(self, browser):
         self.browser = browser
+        self.helper = Helper()
+        self.element_helper = ElementHelper()
+
 
     def save_alert_text_to_file(self, file_name):
-                
         self.browser.find_element(*self.open_alert).click()
-        alert = self.browser.switch_to.alert
-        alert_text = alert.text
-        alert.accept()
-        
-        Helper.save_to_file(text=alert_text, file_name=file_name)
-        
+        alert_text = self.helper.get_and_accept_alert_text(self.browser)
+        self.helper.write_to_file(file_name=file_name, text=alert_text, mode='a+')
         return alert_text
 
     def get_element_attribute(self, file_name):
-       
-        self.browser.find_element(*self.element)
-        self.execute_script("arguments[0].style.display = 'none';",self.element)
-        
-        style_value = self.element.get_attribute("style")
-
-        Helper.save_to_file(text=style_value, file_name=file_name)
+        web_elem = self.browser.find_element(*self.element_locator)
+        self.browser.execute_script("arguments[0].style.display = 'none';", web_elem)
+        style_value = web_elem.get_attribute("style")
+        self.helper.write_to_file(file_name=file_name, text=style_value, mode='a+')
 
     def hover_and_click_top(self):
-        ElementHelper.scroll_to_element(self.browser, self.hover_btn)
-        ElementHelper.hover_element(self.browser, self.hover_btn)
-        self.browser.find_element(*self.top_btn).click()
-
+        self.element_helper.scroll_to_element(self.browser, self.hover_btn)
+        self.element_helper.hover_element(self.browser, self.hover_btn)
+        top_elem = self.element_helper.wait_for_element_visible(self.browser, self.top_btn)
+        top_elem.click()
 
     def write_footer_text(self, file_name):
-
-        footer = self.browser.find_element(*self.footer)
-
-        self.browser.execute_script("arguments[0].scrollIntoView();",footer)
-
-        footer_text = footer.text
-
-        Helper.save_to_file(text=footer_text, file_name=file_name)
-
-
-
-    
+        footer_elem = self.browser.find_element(*self.footer)
+        self.browser.execute_script("arguments[0].scrollIntoView();", footer_elem)
+        footer_text = footer_elem.text
+        self.helper.write_to_file(file_name=file_name, text=footer_text, mode='a+')
