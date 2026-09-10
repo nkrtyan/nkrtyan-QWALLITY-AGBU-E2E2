@@ -1,7 +1,7 @@
-# import sys
-# from pathlib import Path
+import sys
+from pathlib import Path
 
-# sys.path.append(str(Path(__file__).resolve().parent.parent))
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 #python -m tests.test  
 from Helpers.lib import Helper
 from pom.main import LetsKodeitMainPage

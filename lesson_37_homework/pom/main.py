@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from Helpers.lib import Helper, ElementHelper
+from Helpers.lib import Helper
 
 class LetsKodeitMainPage:
     open_alert = (By.ID, 'alertbtn')
@@ -11,8 +11,6 @@ class LetsKodeitMainPage:
     def __init__(self, browser):
         self.browser = browser
         self.helper = Helper()
-        self.element_helper = ElementHelper()
-
 
     def save_alert_text_to_file(self, file_name):
         self.browser.find_element(*self.open_alert).click()
@@ -27,9 +25,9 @@ class LetsKodeitMainPage:
         self.helper.write_to_file(file_name=file_name, text=style_value, mode='a+')
 
     def hover_and_click_top(self):
-        self.element_helper.scroll_to_element(self.browser, self.hover_btn)
-        self.element_helper.hover_element(self.browser, self.hover_btn)
-        top_elem = self.element_helper.wait_for_element_visible(self.browser, self.top_btn)
+        self.helper.scroll_to_element(self.browser, self.hover_btn)
+        self.helper.hover_element(self.browser, self.hover_btn)
+        top_elem = self.helper.wait_for_element_visible(self.browser, self.top_btn)
         top_elem.click()
 
     def write_footer_text(self, file_name):

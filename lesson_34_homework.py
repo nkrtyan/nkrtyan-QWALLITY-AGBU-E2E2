@@ -26,7 +26,7 @@ def get_elements(browser):
         hover = driver.find_elements(By.XPATH, "//legend[text()='Mouse Hover Example']")
         table = driver.find_elements(By.XPATH, '//td[text()="Python Programming Language"]')
 
-        actions = [radio, checkbox,open_tab,selectors ,btn,hide,alert,hover,table]
+        actions = [radio, checkbox,open_tab,selectors ,btn,hide,alert,hover,table] #TODO change var names
 
         return actions
         

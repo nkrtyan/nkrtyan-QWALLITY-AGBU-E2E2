@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from TestData import data
 
-class ElementHelper:
+class Helper:
     def scroll_to_element(self, browser, by_locator):
         element = browser.find_element(*by_locator)
         browser.execute_script("arguments[0].scrollIntoView();", element)
@@ -26,7 +26,6 @@ class ElementHelper:
                 EC.element_to_be_clickable(by_locator)
             )
 
-class Helper:
     def browser(self):
         browser = webdriver.Chrome()
         browser.maximize_window()
@@ -54,3 +53,4 @@ class Helper:
         alert_text = alert.text
         alert.accept()
         return alert_text
+

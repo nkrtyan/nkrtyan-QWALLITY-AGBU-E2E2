@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from Helpers.lib import Helper, ElementHelper
+from Helpers.lib import Helper
 
 class LetsKodeitLoginPage:
     signin_btn = (By.XPATH, '//a[@href="/login"]')
@@ -11,18 +11,18 @@ class LetsKodeitLoginPage:
     def __init__(self, browser):
         self.browser = browser
         self.helper = Helper()
-        self.element_helper = ElementHelper()
+
 
     def login_with_invalid_data(self, email, password, file_name):
-        self.element_helper.scroll_to_element(self.browser, self.signin_btn)
-        signin_elem = self.element_helper.wait_for_element_clickable(self.browser, self.signin_btn)
+        self.helper.scroll_to_element(self.browser, self.signin_btn)
+        signin_elem = self.helper.wait_for_element_clickable(self.browser, self.signin_btn)
         signin_elem.click()
 
         self.browser.find_element(*self.email_input).send_keys(email)
         self.browser.find_element(*self.password_input).send_keys(password)
         self.browser.find_element(*self.submit_login_btn).click()
 
-        error_elem = self.element_helper.wait_for_element_visible(self.browser, self.error_msg_locator)
+        error_elem = self.helper.wait_for_element_visible(self.browser, self.error_msg_locator)
         validation_message = error_elem.text
         self.helper.write_to_file(file_name=file_name, text=validation_message, mode='a+')
 
