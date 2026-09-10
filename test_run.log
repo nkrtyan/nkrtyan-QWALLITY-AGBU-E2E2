@@ -1,0 +1,85 @@
+2026-09-10 13:50:15,878 [INFO] __main__: ===Starting test_live_coding===
+2026-09-10 13:50:22,672 [INFO] __main__: Navigated to https://www.letskodeit.com/practice
+2026-09-10 13:50:22,894 [INFO] __main__: Browser closed
+2026-09-10 13:53:26,512 [INFO] __main__: ===Starting test_live_coding===
+2026-09-10 13:53:33,030 [INFO] __main__: Navigated to https://www.letskodeit.com/practice
+2026-09-10 13:53:33,168 [INFO] __main__: Alert text captured:Hello , share this practice page and share your knowledge
+2026-09-10 13:53:33,276 [INFO] __main__: Hidden element style: display: none;
+2026-09-10 13:53:33,664 [INFO] __main__: Hovered and clicked Top
+2026-09-10 13:53:33,755 [INFO] __main__: Footer text: © 2026 letskodeit
+2026-09-10 13:53:34,450 [INFO] __main__: Clicked Sign In
+2026-09-10 13:53:35,352 [INFO] __main__: Validation message: The email must be a valid email address.
+2026-09-10 13:53:36,083 [INFO] __main__: Opened second tab and navigated to google.com
+2026-09-10 13:53:36,083 [INFO] __main__: === test_live_coding completed successfully ===
+2026-09-10 13:53:36,188 [INFO] __main__: Browser closed
+2026-09-10 14:14:15,382 [INFO] __main__: ===Starting test_live_coding===
+2026-09-10 14:14:21,657 [INFO] __main__: Navigated to https://www.letskodeit.com/practice
+2026-09-10 14:14:21,789 [INFO] __main__: Alert text captured:Hello , share this practice page and share your knowledge
+2026-09-10 14:14:21,897 [INFO] __main__: Hidden element style: display: none;
+2026-09-10 14:14:22,252 [INFO] __main__: Hovered and clicked Top
+2026-09-10 14:14:22,363 [INFO] __main__: Footer text: © 2026 letskodeit
+2026-09-10 14:14:23,145 [INFO] __main__: Clicked Sign In
+2026-09-10 14:14:24,045 [INFO] __main__: Validation message: The email must be a valid email address.
+2026-09-10 14:14:24,609 [INFO] __main__: Opened second tab and navigated to google.com
+2026-09-10 14:14:24,609 [INFO] __main__: === test_live_coding completed successfully ===
+2026-09-10 14:14:24,715 [INFO] __main__: Browser closed
+2026-09-10 14:14:51,850 [INFO] __main__: ===Starting test_live_coding===
+2026-09-10 14:14:56,177 [INFO] __main__: Navigated to https://www.letskodeit.com/practice
+2026-09-10 14:14:56,303 [INFO] __main__: Alert text captured:Hello , share this practice page and share your knowledge
+2026-09-10 14:14:56,409 [INFO] __main__: Hidden element style: display: none;
+2026-09-10 14:14:56,765 [INFO] __main__: Hovered and clicked Top
+2026-09-10 14:14:56,843 [INFO] __main__: Footer text: © 2026 letskodeit
+2026-09-10 14:14:57,503 [INFO] __main__: Clicked Sign In
+2026-09-10 14:14:58,401 [INFO] __main__: Validation message: The email must be a valid email address.
+2026-09-10 14:14:58,979 [INFO] __main__: Opened second tab and navigated to google.com
+2026-09-10 14:14:58,979 [INFO] __main__: === test_live_coding completed successfully ===
+2026-09-10 14:14:59,076 [INFO] __main__: Browser closed
+2026-09-10 14:15:34,785 [INFO] __main__: ===Starting test_live_coding===
+2026-09-10 14:15:40,082 [INFO] __main__: Navigated to https://www.letskodeit.com/practice
+2026-09-10 14:15:40,218 [INFO] __main__: Alert text captured:Hello , share this practice page and share your knowledge
+2026-09-10 14:15:40,324 [INFO] __main__: Hidden element style: display: none;
+2026-09-10 14:15:40,675 [INFO] __main__: Hovered and clicked Top
+2026-09-10 14:15:40,710 [INFO] __main__: Footer text: © 2026 letskodeit
+2026-09-10 14:15:41,454 [INFO] __main__: Clicked Sign In
+2026-09-10 14:15:42,444 [INFO] __main__: Validation message: The email must be a valid email address.
+2026-09-10 14:15:42,986 [INFO] __main__: Opened second tab and navigated to google.com
+2026-09-10 14:15:42,986 [INFO] __main__: === test_live_coding completed successfully ===
+2026-09-10 14:15:43,088 [INFO] __main__: Browser closed
+2026-09-10 14:16:13,999 [INFO] __main__: ===Starting test_live_coding===
+2026-09-10 14:16:19,662 [INFO] __main__: Navigated to https://www.letskodeit.com/practice
+2026-09-10 14:16:19,796 [INFO] __main__: Alert text captured:Hello , share this practice page and share your knowledge
+2026-09-10 14:16:19,906 [INFO] __main__: Hidden element style: display: none;
+2026-09-10 14:16:20,269 [INFO] __main__: Hovered and clicked Top
+2026-09-10 14:16:20,381 [INFO] __main__: Footer text: © 2026 letskodeit
+2026-09-10 14:16:21,209 [INFO] __main__: Clicked Sign In
+2026-09-10 14:16:22,120 [INFO] __main__: Validation message: The email must be a valid email address.
+2026-09-10 14:16:22,955 [INFO] __main__: Opened second tab and navigated to google.com
+2026-09-10 14:16:22,955 [INFO] __main__: === test_live_coding completed successfully ===
+2026-09-10 14:16:23,052 [INFO] __main__: Browser closed
+2026-09-10 14:21:16,917 [INFO] __main__: ===Starting test_live_coding===
+2026-09-10 14:21:21,872 [INFO] __main__: Navigated to https://www.letskodeit.com/practice
+2026-09-10 14:21:22,013 [INFO] __main__: Alert text captured:Hello , share this practice page and share your knowledge
+2026-09-10 14:21:22,121 [INFO] __main__: Hidden element style: display: none;
+2026-09-10 14:21:22,475 [INFO] __main__: Hovered and clicked Top
+2026-09-10 14:21:22,573 [INFO] __main__: Footer text: © 2026 letskodeit
+2026-09-10 14:21:23,262 [INFO] __main__: Clicked Sign In
+2026-09-10 14:21:34,607 [INFO] __main__: Browser closed
+2026-09-10 14:22:09,848 [INFO] __main__: ===Starting test_live_coding===
+2026-09-10 14:22:15,298 [INFO] __main__: Navigated to https://www.letskodeit.com/practice
+2026-09-10 14:22:15,426 [INFO] __main__: Alert text captured:Hello , share this practice page and share your knowledge
+2026-09-10 14:22:15,533 [INFO] __main__: Hidden element style: display: none;
+2026-09-10 14:22:15,903 [INFO] __main__: Hovered and clicked Top
+2026-09-10 14:22:15,987 [INFO] __main__: Footer text: © 2026 letskodeit
+2026-09-10 14:22:16,812 [INFO] __main__: Clicked Sign In
+2026-09-10 14:22:27,289 [INFO] __main__: Browser closed
+2026-09-10 14:24:01,520 [INFO] __main__: ===Starting test_live_coding===
+2026-09-10 14:24:06,868 [INFO] __main__: Navigated to https://www.letskodeit.com/practice
+2026-09-10 14:24:07,005 [INFO] __main__: Alert text captured:Hello , share this practice page and share your knowledge
+2026-09-10 14:24:07,113 [INFO] __main__: Hidden element style: display: none;
+2026-09-10 14:24:07,472 [INFO] __main__: Hovered and clicked Top
+2026-09-10 14:24:07,551 [INFO] __main__: Footer text: © 2026 letskodeit
+2026-09-10 14:24:08,462 [INFO] __main__: Clicked Sign In
+2026-09-10 14:24:09,581 [INFO] __main__: Validation message: The email must be a valid email address.
+2026-09-10 14:24:10,409 [INFO] __main__: Opened second tab and navigated to google.com
+2026-09-10 14:24:10,409 [INFO] __main__: === test_live_coding completed successfully ===
+2026-09-10 14:24:10,511 [INFO] __main__: Browser closed
