@@ -30,8 +30,8 @@ class LetsKodeitMainPage:
         top_elem = self.helper.wait_for_element_visible(self.browser, self.top_btn)
         top_elem.click()
 
+
     def write_footer_text(self, file_name):
-        footer_elem = self.browser.find_element(*self.footer)
-        self.browser.execute_script("arguments[0].scrollIntoView();", footer_elem)
+        footer_elem = self.scroll_to_element(self.browser, self.footer)
         footer_text = footer_elem.text
         self.helper.write_to_file(file_name=file_name, text=footer_text, mode='a+')

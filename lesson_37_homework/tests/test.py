@@ -36,4 +36,4 @@ if __name__ == "__main__":
         print(f"Թեստի ընթացքում տեղի ունեցավ սխալ: {error}")
 
     finally:
-        helper.close_browser(browser)
+        browser.quit()

@@ -13,12 +13,12 @@ class LetsKodeitLoginPage:
         self.helper = Helper()
 
 
-    def login_with_invalid_data(self, email, password, file_name):
+    def login_with_invalid_data(self, username, password, file_name):
         self.helper.scroll_to_element(self.browser, self.signin_btn)
         signin_elem = self.helper.wait_for_element_clickable(self.browser, self.signin_btn)
         signin_elem.click()
 
-        self.browser.find_element(*self.email_input).send_keys(email)
+        self.browser.find_element(*self.email_input).send_keys(username)
         self.browser.find_element(*self.password_input).send_keys(password)
         self.browser.find_element(*self.submit_login_btn).click()
 

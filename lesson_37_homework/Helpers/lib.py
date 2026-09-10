@@ -5,6 +5,24 @@ from selenium.webdriver.support import expected_conditions as EC
 from TestData import data
 
 class Helper:
+    def browser(self):
+        browser = webdriver.Chrome()
+        browser.maximize_window()
+        return browser
+
+    def navigate_to_page(self, browser):
+        browser.get(data.url)
+
+    def get_and_accept_alert_text(self, browser) -> str:
+        alert = browser.switch_to.alert
+        alert_text = alert.text
+        alert.accept()
+        return alert_text
+
+    def write_to_file(self, file_name, text, mode="a") -> None:
+        with open(file_name, mode, encoding="utf-8") as file:
+            file.write(f"{text}\n")
+    
     def scroll_to_element(self, browser, by_locator):
         element = browser.find_element(*by_locator)
         browser.execute_script("arguments[0].scrollIntoView();", element)
@@ -26,21 +44,6 @@ class Helper:
                 EC.element_to_be_clickable(by_locator)
             )
 
-    def browser(self):
-        browser = webdriver.Chrome()
-        browser.maximize_window()
-        return browser
-
-    def navigate_to_page(self, browser):
-        browser.get(data.url)
-
-    def close_browser(self, browser):
-        if browser:
-            browser.quit()
-
-    def write_to_file(self, file_name, text, mode="a") -> None:
-        with open(file_name, mode, encoding="utf-8") as file:
-            file.write(f"{text}\n")
 
     def open_new_tab_and_switch(self, browser, url: str) -> None:
         browser.execute_script("window.open('');")
@@ -48,9 +51,5 @@ class Helper:
         browser.switch_to.window(new_tab)
         browser.get(url)
 
-    def get_and_accept_alert_text(self, browser) -> str:
-        alert = browser.switch_to.alert
-        alert_text = alert.text
-        alert.accept()
-        return alert_text
+
 
