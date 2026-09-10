@@ -1,0 +1,1 @@
+wait = WebDriverWait(driver, 10)

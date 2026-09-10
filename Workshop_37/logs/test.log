@@ -1,0 +1,17 @@
+2026-09-11 00:46:15,374 - INFO - Test started
+2026-09-11 00:46:21,225 - INFO - Practice page opened
+2026-09-11 00:46:21,342 - INFO - Alert button clicked
+2026-09-11 00:46:21,347 - INFO - Popup text: Hello , share this practice page and share your knowledge
+2026-09-11 00:46:21,354 - INFO - Alert accepted
+2026-09-11 00:46:21,583 - INFO - Hidden element attribute: style=display: none;
+2026-09-11 00:46:22,084 - INFO - Mouse Hover -> Top: PASSED
+2026-09-11 00:46:22,223 - INFO - Footer text: 
+2026-09-11 00:46:23,049 - INFO - Sign In: PASSED
+2026-09-11 00:46:23,267 - INFO - Invalid email entered
+2026-09-11 00:46:23,336 - INFO - Invalid password entered
+2026-09-11 00:46:23,401 - INFO - Login button clicked
+2026-09-11 00:46:23,416 - INFO - Validation message: 
+2026-09-11 00:46:23,682 - INFO - New tab opened
+2026-09-11 00:46:24,705 - INFO - Google opened in second tab
+2026-09-11 00:46:24,936 - INFO - Assignment 2 finished successfully
+2026-09-11 00:46:24,936 - INFO - Browser closed

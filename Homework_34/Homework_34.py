@@ -104,7 +104,13 @@ def find_highlighted_elements(driver):
             "Mouse Hover Button",
             By.CSS_SELECTOR,
             "#mousehover"
-        )
+        ),
+      # 10. Web Table Example
+(
+    "Web Table Example",
+    By.XPATH,
+    "//td[text()='Python Programming Language']"
+),
     ]
 
     total = 0

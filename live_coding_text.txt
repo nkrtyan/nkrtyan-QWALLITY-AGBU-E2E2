@@ -1,0 +1,13 @@
+Popup text:
+Hello , share this practice page and share your knowledge
+
+Hidden element:
+Attribute: style
+Value: display: none;
+
+Footer text:
+
+
+Validation message:
+
+
