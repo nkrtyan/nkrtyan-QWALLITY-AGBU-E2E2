@@ -37,7 +37,7 @@ class Sign_in(Letskodeit_main_page):
         username_field.click()
         username_field.send_keys(self.username)
 
-        password_field = WebDriverWait(self.my_driver, 10).umtil(EC.visibility_of_element_located(self.password_field))
+        password_field = WebDriverWait(self.my_driver, 10).until(EC.visibility_of_element_located(self.password_field))
         password_field.click()
         password_field.send_keys(self.password)
 
