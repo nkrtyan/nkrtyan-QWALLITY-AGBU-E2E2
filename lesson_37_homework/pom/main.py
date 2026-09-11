@@ -3,6 +3,7 @@ from Helpers.lib import Helper
 
 class LetsKodeitMainPage:
     open_alert = (By.ID, 'alertbtn')
+    hide_btn = (By.ID, 'hide-textbox')
     element_locator = (By.ID, "displayed-text")
     hover_btn = (By.XPATH, '//button[@id="mousehover"]')
     top_btn = (By.XPATH, '//a[@href="#top"]')
@@ -12,26 +13,36 @@ class LetsKodeitMainPage:
         self.browser = browser
         self.helper = Helper()
 
-    def save_alert_text_to_file(self, file_name):
+    def get_alert_text(self, file_name):
         self.browser.find_element(*self.open_alert).click()
         alert_text = self.helper.get_and_accept_alert_text(self.browser)
-        self.helper.write_to_file(file_name=file_name, text=alert_text, mode='a+')
+        # self.helper.write_to_file(file_name=file_name, text=alert_text, mode='a+') #FIXED move to get_and_accept_alert_text function
         return alert_text
 
-    def get_element_attribute(self, file_name):
-        web_elem = self.browser.find_element(*self.element_locator)
-        self.browser.execute_script("arguments[0].style.display = 'none';", web_elem)
-        style_value = web_elem.get_attribute("style")
-        self.helper.write_to_file(file_name=file_name, text=style_value, mode='a+')
+    # def get_element_attribute(self, file_name):
+    #     self.helper.wait_for_element_clickable(self.browser, self.hide_btn, action="click")
+    #     style_value = self.helper.wait_for_element_visible(self.browser, self.element_locator, action="get_attribute",name="style")
+    #     return style_value
+        # self.helper.write_to_file(file_name=file_name, text=style_value, mode='a+') #TODO move to helper
 
+    def get_element_attribute(self, file_name):
+        # 1. Նախ գտնում ենք տեսանելի էլեմենտը և պահում element փոփոխականում
+        element = self.helper.wait_for_element_visible(self.browser, self.element_locator)
+        
+        # 2. Սեղմում ենք Hide կոճակը
+        self.helper.wait_for_element_clickable(self.browser, self.hide_btn, action="click")
+        
+        # 3. Քանի որ element օբյեկտը արդեն ձեռքի տակ ունենք, ուղղակի կանչում ենք get_attribute-ը
+        style_value = element.get_attribute("style")
+        
+        return style_value
     def hover_and_click_top(self):
         self.helper.scroll_to_element(self.browser, self.hover_btn)
-        self.helper.hover_element(self.browser, self.hover_btn)
-        top_elem = self.helper.wait_for_element_visible(self.browser, self.top_btn)
-        top_elem.click()
+        # self.helper.hover_element(self.browser, self.hover_btn)
+        top_elem = self.helper.wait_for_element_visible(self.browser, self.top_btn, action="click")
+        
 
-
-    def write_footer_text(self, file_name):
-        footer_elem = self.scroll_to_element(self.browser, self.footer)
-        footer_text = footer_elem.text
-        self.helper.write_to_file(file_name=file_name, text=footer_text, mode='a+')
+    def get_footer_text(self, file_name):
+        footer_elem = self.helper.scroll_to_element(self.browser, self.footer) #TODO move to test case 
+        return footer_elem.text
+        # self.helper.write_to_file(file_name=file_name, text=footer_text, mode='a+')
