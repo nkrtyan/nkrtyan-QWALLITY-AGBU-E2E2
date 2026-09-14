@@ -1,0 +1,12 @@
+Alert text:
+Hello , share this practice page and share your knowledge
+
+Hidden element style attribute:
+display: none;
+
+Footer text:
+
+
+Login validation message:
+Incorrect login details. Please try again.
+
