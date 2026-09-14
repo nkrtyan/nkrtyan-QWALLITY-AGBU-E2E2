@@ -18,8 +18,7 @@
 import os
 import sys
 
-# Make the project root importable regardless of how/where this file is run from
-# (VS Code "Run", `python3 app/tests/test_web.py`, pytest, etc.)
+
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
@@ -37,7 +36,7 @@ def test_live_coding():
     helper = Helper()
     browser = helper.get_browser()
 
-    try:
+    try:#TODO not add in tests, onli inside function
         # 1-2. Open Chrome and navigate to the practice page
         helper.navigate_to(browser, data.url)
         logger.info(f"Navigated to {data.url}")
@@ -47,7 +46,7 @@ def test_live_coding():
         practice_page.open_alert()
         popup_text = practice_page.get_and_accept_alert_text()
         logger.info(f"Alert text captured:{popup_text}")
-        helper.write_to_file(data.output_file, popup_text, mode="w")
+        helper.write_to_file(data.output_file, popup_text)
 
         # 6. Hide the element and log the attribute that controls show/hide
         practice_page.hide_displayed_text()
@@ -61,7 +60,7 @@ def test_live_coding():
 
         # 8. Scroll to the footer and log its text
         footer_text = practice_page.scroll_to_footer_and_get_text()
-        logger.info(f"Footer text: {footer_text}") 
+        logger.info(f"Footer text: {footer_text}") #TODO add logging in fuctions
         helper.write_to_file(data.output_file, footer_text)
 
         # 9. Click Sign In
@@ -76,9 +75,16 @@ def test_live_coding():
         helper.write_to_file(data.output_file, validation_message)
 
         # 12-13. Open a second tab, switch to it, and navigate to google.com
-        helper.open_new_tab_and_navigate(browser, data.second_tab_url)
+        helper.open_new_tab_and_navigate(browser, data.second_tab_url)#TODO googl url
         logger.info("Opened second tab and navigated to google.com")
         logger.info("=== test_live_coding completed successfully ===")
+
+    
+    except Exception as error:
+      #  helper.take_screenshot(browser, "test_live_coding")
+        logger.info(f"Test failed with error: {error}")
+        raise
+    
 
     finally:
         helper.close_browser(browser)
@@ -87,3 +93,5 @@ def test_live_coding():
 
 if __name__ == "__main__":
     test_live_coding()
+
+    #TODO move function add in helpers
