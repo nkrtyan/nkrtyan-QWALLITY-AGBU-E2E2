@@ -5,25 +5,9 @@ from TestData import config
 import os
 from datetime import datetime
 
-
-@pytest.fixture
-def browser():
-    try:
-        logging.info("Browser is opening ...")
-        driver = webdriver.Chrome()
-        driver.maximize_window()
-        driver.get(config.url)
-        yield driver
-        driver.quit()
-        logging.info("Browser is closed")
-    except:
-        print("Browser is fail")
-
-
 @pytest.fixture
 def test_logger(request):
     try:
-       
         today_date = datetime.today().date()
         os.makedirs(f"logs_{today_date}", exist_ok=True)
 
@@ -48,7 +32,21 @@ def test_logger(request):
 
 
 @pytest.fixture
-def write_to_file(self, file_name, text, mode="a"):
-    with open(file_name, mode=mode, encoding="utf-8") as file:
-        file.write(f"{text}\n")
+def browser():
+    try:
+        logging.info("Browser is opening ...")
+        driver = webdriver.Chrome()
+        driver.maximize_window()
+        driver.get(config.url)
+        yield driver
+        driver.quit()
+        logging.info("Browser is closed")
+    except:
+        print("Browser is fail")
+
+
+# @pytest.fixture
+# def write_to_file(self, file_name, text, mode="a"):
+#     with open(file_name, mode=mode, encoding="utf-8") as file:
+#         file.write(f"{text}\n")
 

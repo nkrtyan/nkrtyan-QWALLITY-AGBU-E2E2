@@ -51,7 +51,7 @@ class Helper:
     
     def open_new_tab_and_switch(self, browser, url):
         browser.execute_script("window.open('');")
-        new_tab = browser.window_handles[-1]
+        new_tab = browser.window_handles[0]
         browser.switch_to.window(new_tab)
         browser.get(config.new_tab_url)
 

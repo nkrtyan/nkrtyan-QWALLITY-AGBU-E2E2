@@ -7,7 +7,7 @@ from TestData import config, data
 def test_login(browser, test_logger):
     login_page = LetsKodeitLoginPage(browser)
     error_message = login_page.login(data.username, data.password, config.file_name)
-    assert error_message, "Էռոռ հաղորդագրություն չի բերվել"
+    assert error_message, "No error message was returned."
 
 
 @pytest.mark.smoke
