@@ -1,7 +1,8 @@
 import pytest
 from pom.main import LetsKodeitMainPage
-from TestData import config
+from lesson_38_homework import config
 
+#TODO combine all cases in one function and make one file for scenario
 
 @pytest.mark.smoke
 def test_alert_handling(browser):

@@ -1,6 +1,7 @@
 import pytest
+from lesson_38_homework import config
 from pom.login import LetsKodeitLoginPage
-from TestData import config, data
+from TestData import data
 
 
 @pytest.mark.regression

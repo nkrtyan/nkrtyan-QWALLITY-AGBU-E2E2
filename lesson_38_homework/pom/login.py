@@ -1,8 +1,9 @@
 from Helpers.lib import Helper
 from selenium.webdriver.common.by import By
-from TestData import config
+from lesson_38_homework import config
 import logging
 
+#TODO same as main page inheritance
 class LetsKodeitLoginPage:
   signin_btn = (By.XPATH, '//a[@href="/login"]')
   email_input = (By.XPATH, "//input[@name='email']")
@@ -10,11 +11,12 @@ class LetsKodeitLoginPage:
   submit_login_btn = (By.XPATH, "//button[@id='login']")
   error_msg_locator = (By.XPATH, "//span[@id='incorrectdetails']")
 
-  def __init__(self, browser):
-    self.browser = browser
-    self.helper = Helper()
+  # def __init__(self, browser):
+  #   self.browser = browser
+  #   self.helper = Helper()
 
   def login(self, username, password, file_name):
+    #TODO move write file to test case
     try:
         logging.info(f"Trying to login in by {username} user...")
         self.helper.scroll_to_element(self.browser, self.signin_btn)
@@ -38,6 +40,7 @@ class LetsKodeitLoginPage:
       logging.error(f"An error occurred during the login flow. {e}")
       raise
 
+#TODO move to helper
   def open_new_tab(self):
     try:
         logging.info("Opening Google in a new tab...")
