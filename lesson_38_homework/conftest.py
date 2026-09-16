@@ -1,17 +1,40 @@
 import logging
 import pytest
 from selenium import webdriver
-from lesson_38_homework import config
 import os
 from datetime import datetime
 
+
+@pytest.fixture
+def browser():
+    try:
+        # Run Chrome in headless mode
+        # options = webdriver.ChromeOptions()
+        # options.add_argument('--headless=new')
+        # options.add_argument('--window-size=1920,1080')
+        # driver = webdriver.Chrome(options=options)
+
+        # Open a visible browser window and maximize it
+        logging.info("Browser is opening ...")
+        driver = webdriver.Chrome()
+        driver.maximize_window()
+        yield driver
+        logging.info("Browser is closed")
+    except Exception as e:
+        print(f'Failed to set up driver: {e}')
+    finally:
+        if driver:
+            driver.quit()
+
 @pytest.fixture
 def test_logger(request):
-    try:
-        today_date = datetime.today().date()
-        os.makedirs(f"logs_{today_date}", exist_ok=True)
 
-        test_name = request.node.name
+    today_date = datetime.today().date()
+    test_name = request.node.name
+    logs_dir = f"logs_{today_date}"
+
+    try:
+        os.makedirs(f"logs_{today_date}", exist_ok=True)
         log_path = f"logs_{today_date}/{test_name}.log"
 
         logging.basicConfig(
@@ -23,25 +46,16 @@ def test_logger(request):
             force=True
         )
 
-        logging.info(f"{test_name} is started")
-        yield
-        logging.info(f"{test_name} is finished")
-
     except Exception as e:
-       print("Something went wrong ") #TODO change message
+        logging.error(f'Failed to set up logger: {e}')
+        raise
 
 
-@pytest.fixture
-def browser():
-    try:
-        logging.info("Browser is opening ...")
-        driver = webdriver.Chrome()
-        driver.maximize_window()
-        # driver.get(config.url) #TODO remove this line
-        yield driver
-        driver.quit()
-        logging.info("Browser is closed")
-    except:
-        print("Browser is fail")
+# used by lib.py to save a screenshot under logs_<date>/screenshots/<test_name>.png on failure
+    logging.test_name = test_name
+    logging.screenshot_dir = f"{logs_dir}/screenshots"
 
+    logging.info(f"{test_name} is started")
+    yield logging
+    logging.info(f"{test_name} is finished")
 

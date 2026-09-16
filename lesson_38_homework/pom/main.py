@@ -1,70 +1,54 @@
 from selenium.webdriver.common.by import By
 from Helpers.lib import Helper
-import logging
-
-#TODO Inheritance helper 
-class LetsKodeitMainPage:
+class LetsKodeitMainPage(Helper):
     open_alert = (By.ID, 'alertbtn')
     hide_btn = (By.ID, 'hide-textbox')
     element_locator = (By.ID, "displayed-text")
     hover_btn = (By.XPATH, '//button[@id="mousehover"]')
     top_btn = (By.XPATH, '//a[@href="#top"]')
     footer = (By.XPATH, "//p[contains(@class, 'jqCopyRight')]")
-    #TODO add sign in locator and functions to move there
+    signin_btn = (By.XPATH, '//a[@href="/login"]')
 
-    # def __init__(self, browser):
-    #     self.browser = browser
-    #     self.helper = Helper()
-
-#TODO use my conftest logger 
-
-    def get_alert_text(self, file_name): #TODO remove this function
+    def get_element_attribute(self): 
         try:
-            logging.info("Click to alert btn...")
-            self.helper.wait_for_element_clickable(self.browser, self.open_alert)
-            alert_text = self.helper.get_and_accept_alert_text(self.browser, file_name) 
-            logging.info(f"A text was received from the alert: {alert_text}")
-            return alert_text
+            self.test_logger.info("Checking the element attribute after Hide...")
+            self.wait_and_click(self.hide_btn)
+            hide_attr = self.wait_and_get_attribute(self.inp_exapmle, 'style')
+            self.test_logger.info(f'Hidden attribute is - {hide_attr}')
+            return hide_attr
         except Exception as e:
-            logging.error(f"An error accurded from alert {e}")
-            raise
-
-    def get_element_attribute(self, file_name): #TODO change function
-        try:
-            logging.info("Checking the element attribute after Hide...")
-            element = self.helper.wait_for_element_visible(self.browser, self.element_locator)
-            self.helper.wait_for_element_clickable(self.browser, self.hide_btn)
-            style_value = element.get_attribute("style")
-            if file_name:
-                self.helper.write_to_file(file_name, style_value)
-            logging.info(f"Style attribute value {style_value}")
-            return style_value
-        
-        except Exception as e:
-            logging.error(f"An error occurred during the Hide/Attribute check. {e}")
+            self.test_logger.error(f"An error occurred during the Hide/Attribute check. {e}")
             raise
 
     def hover_and_click(self):
         try:
-            logging.info("Hover and click #top....")
-            self.helper.scroll_to_element(self.browser, self.hover_btn)
-            self.helper.wait_for_element_clickable(self.browser, self.top_btn)
-            logging.info("Top click is done")
+            self.test_logger.info("Hover and click #top....")
+            self.scroll_to_element(self.hover_btn)
+            self.wait_and_click(self.hover_btn)
+            self.wait_and_click(self.top_btn)
+            self.test_logger.info('Mouse hover check passed')
 
         except Exception as e:
-            logging.error(f"An error occurred during the hover/top click. {e}")
+            self.test_logger.error(f"An error occurred during the hover/top click. {e}")
             raise
             
 
-    def get_footer_text(self, file_name):
+    def get_footer_text(self):
         try:
-            logging.info("Reading the footer text....")
-            footer_elem = self.helper.scroll_to_element(self.browser, self.footer) 
-            footer_text = footer_elem.text
-            self.helper.write_to_file(file_name=file_name, text=footer_text, mode='a+')
-            logging.info(f"Footer text {footer_text}")
-            return footer_text
+            self.test_logger.info("Reading the footer text....")
+            self.scroll_to_element(self.footer) 
+            f_text = self.wait_and_get_text(self.footer)
+            self.test_logger.info(f"Footer text is {f_text}")
+            return f_text
 
         except Exception as e:
-            logging.error(f"An error occurred while reading the footer text. {e}")
+            self.test_logger.error(f"An error occurred while reading the footer text. {e}")
+            raise
+    
+    def click_sign_in_btn(self):
+        try:
+            self.wait_and_click(self.signin_btn)
+            self.test_logger.info('Clicked sign in button')
+        except Exception as e:
+            self.test_logger.error(f'Click sign in button failed: {e}')
             raise

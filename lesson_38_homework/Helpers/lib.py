@@ -1,61 +1,122 @@
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from lesson_38_homework import config
+import os
+import logging
+import allure
 
 class Helper:
 
-    #TODO add __init__ for conftest methods, driver and logger 
-    #TODO all functions put Try/except
-    #TODO add logging for functions
+    def __init__(self, driver, test_logger):
+        self.driver = driver
+        self.test_logger = test_logger
 
-    #TODO combine navigate_to_page and open_new_tab_and_switch functions
-    def navigate_to_page(self, browser):
-        browser.get(config.url)
+    def _error_with_screenshot(self, message):
+        logging.error(message)
+        os.makedirs(self.test_logger.screenshot_dir, exist_ok=True)
+        self.driver.save_screenshot(f"{self.test_logger.screenshot_dir}/{self.test_logger.test_name}.png")
+        allure.attach(
+            self.driver.get_screenshot_as_png(),
+            name=f"{self.test_logger.test_name}_failure",
+            attachment_type=allure.attachment_type.PNG,
+        )
 
-    def open_new_tab_and_switch(self, browser, url):
-        browser.execute_script("window.open('');")
-        new_tab = browser.window_handles[0]
-        browser.switch_to.window(new_tab)
-        browser.get(config.new_tab_url)
+    def navigate_to_page(self, url, new_window=False):
+        try:
+            if new_window:
+                self.test_logger.info(f'Opening page in a new window: {url}')
+                self.driver.execute_script(f"window.open('{url}');")
+            else:
+                self.test_logger.info(f'Opening page: {url}')
+                self.driver.get(url)
+        except Exception as e:
+            self._error_with_screenshot(f'Go to page failed: {e}')
+            raise
 
 
     def write_to_file(self, file_name, text):
-        if file_name:
-            with open(file_name, mode="a+", encoding="utf-8") as file:
-                file.write(f"{text}\n")
+        try:
+            if file_name:
+                with open(file_name, mode="a+", encoding="utf-8") as file:
+                    file.write(f"{text}\n")
+                self.test_logger.info(f'Appended text to file {file_name}: {text}')
+        except Exception as e:
+            self.test_logger.error(f'Append text to file failed for {file_name}: {e}')
+            raise
 
-    def get_and_accept_alert_text(self, browser, file_name):
-        alert = browser.switch_to.alert
-        alert_text = alert.text
-        self.write_to_file(file_name=file_name, text=alert_text) #TODO move to test scenar
-        alert.accept()
-        return alert_text
-
-    def scroll_to_element(self, browser, by_locator): 
-        element = browser.find_element(*by_locator)
-        browser.execute_script("arguments[0].scrollIntoView();", element)
-
-
-    def wait_for_element_visible(self, browser, by_locator, timeout=20): 
-        element = WebDriverWait(browser, timeout).until(
-            EC.visibility_of_element_located(by_locator)
-        )
-       
-        return element
-
-    def wait_for_element_clickable(self, browser, by_locator, timeout=20): #TODO change function name
-        element = WebDriverWait(browser, timeout).until(
-                EC.element_to_be_clickable(by_locator)
+    def get_and_accept_alert_text(self, timeout=5):
+        try:
+            WebDriverWait(self.driver, timeout).until(
+                EC.alert_is_present()
             )
-        element.click()
+            alert = self.driver.switch_to.alert
+            alert_text = alert.text
+            alert.accept()
+            self.test_logger.info(f'Accepted alert with text: {alert_text}')
+            return alert_text
+        except Exception as e:
+            self._error_with_screenshot(f'Accept alert failed: {e}')
+            raise
 
-    #TODO add 4 functions, wait_and_click, wait_and_send_keys, wait_and_get_attribute, wait_and_get_text
 
-    # def send_keys(self, browser, by_locator, text, timeout=20):
-    #     element = self.wait_for_element_visible(browser, by_locator, timeout)
-    #     element.clear()
-    #     element.send_keys(text)
-    #     return element
-    
+    def scroll_to_element(self, by_locator): 
+        try:
+            element = self.driver.find_element(*by_locator)
+            self.driver.execute_script("arguments[0].scrollIntoView();", element)
+            self.test_logger.info(f'Elemet scrolled to {by_locator} elememt')
+        except Exception as e:
+            self.test_logger.error(f'Scroll to element failed for {by_locator}: {e}')
+            raise
 
+    def wait_and_click(self, by_locator, timeout=5):
+        try:
+            element = WebDriverWait(self.driver, timeout).until(
+                            EC.element_to_be_clickable(by_locator)
+                        )
+            element.click()
+            self.test_logger.info(f'Clicked element: {by_locator}')
+        except Exception as e:
+            self._error_with_screenshot(f'Find and click failed for {by_locator}: {e}')
+            raise
+
+    def wait_and_send_keys(self, by_locator, input_text, timeout=5):
+        try:
+            elem = WebDriverWait(self.driver, timeout).until(
+                EC.visibility_of_element_located(by_locator)
+            )
+            elem.send_keys(input_text)
+            self.test_logger.info(f'Entered text into element: {by_locator}')
+        except Exception as e:
+            self._error_with_screenshot(f'Find and send keys failed for {by_locator}: {e}')
+            raise
+
+    def wait_and_get_attribute(self, by_locator, attribute, timeout=5):
+        try:
+            elem = WebDriverWait(self.driver, timeout).until(
+                EC.presence_of_element_located(by_locator)
+            )
+            value = elem.get_attribute(attribute)
+            self.test_logger.info(f'Got attribute {attribute} for element {by_locator}: {value}')
+            return value
+        except Exception as e:
+            self._error_with_screenshot(f'Get attribute failed for {by_locator}: {e}')
+            raise
+
+    def wait_and_get_text(self, by_locator, timeout=5):
+        try:
+            elem = WebDriverWait(self.driver, timeout).until(
+                EC.visibility_of_element_located(by_locator)
+            )
+            text = elem.text
+            self.test_logger.info(f'Got text for element {by_locator}: {text}')
+            return text
+        except Exception as e:
+            self._error_with_screenshot(f'Get text failed for {by_locator}: {e}')
+            raise
+
+    def switch_window(self, window_id=0):
+        try:
+            self.driver.switch_to.window(self.driver.window_handles[window_id])
+            self.test_logger.info(f'Switched to window: {window_id}')
+        except Exception as e:
+            self._error_with_screenshot(f'Switch window failed: {e}')
+            raise
