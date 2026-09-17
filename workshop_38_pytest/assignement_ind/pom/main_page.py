@@ -1,20 +1,13 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import time
-from workshop_37.assignement_ind import test_data
-from workshop_37.assignement_ind.helpers import Helper
-import logging
+from workshop_38_pytest.assignement_ind.helpers import Helper
+
 
 
 # 3. Click to open the Alert popup
 # 4. Get text from the popup
 # 5. Open txt file with live_coding_text.txt file name and write there popup text
 
-class Test_letskodeit_main_page:
+class Letskodeit_main_page(Helper):
     alert_btn = (By.XPATH, '//input[@id = "alertbtn"]')
     hide_show_element = (By.XPATH, '//input[@id = "displayed-text"]')
     hide_btn = (By.XPATH, '//input[@id = "hide-textbox"]')
@@ -25,11 +18,11 @@ class Test_letskodeit_main_page:
 
     def __init__(self, my_driver):
         self.my_driver = my_driver
-        # self.helper = Helper()
+        self.helper = Helper()
 
 # username_field = WebDriverWait(self.my_driver, 10).until(EC.visibility_of_element_located(self.username_field))
 
-    def test_alert_click(self):
+    def alert_click(self):
 
         try:
             alert_btn_click = WebDriverWait(self.my_driver, 10).until(EC.visibility_of_element_located(self.alert_btn))
@@ -45,11 +38,12 @@ class Test_letskodeit_main_page:
 
         except Exception as e:
             logging.error("Error while handling alert: %s", e)
+            raise
 
 
 
 # 6. Locate the mentioned element, hide it, and then add the attribute and its value, based on which it shows and hides, to the text file
-    def test_hide_show_function(self):
+    def hide_show_function(self):
         try:
         
             hide_show_element = WebDriverWait(self.my_driver, 10).until(EC.visibility_of_element_located(self.hide_show_element))
@@ -70,11 +64,11 @@ class Test_letskodeit_main_page:
             logging.error("Error while handling Hide/Show action: %s", e)
 
 # 7. Move to Mouse Hover button, click on it and Click on Top option to go to the top of screen
-    def test_mouse_hover(self):
+    def mouse_hover(self):
         try:
             mouse_hove_btn = WebDriverWait(self.my_driver, 10).until(EC.visibility_of_element_located(self.mouse_hove_btn))
             mouse_hove_btn.click()
-            mouse_btn_top = WebDriverWait(self.my_driver, 10). until(EC.visibility_of_element_located(*self.mouse_btn_top))
+            mouse_btn_top = WebDriverWait(self.my_driver, 10). until(EC.visibility_of_element_located(self.mouse_btn_top))
             actions = ActionChains(self.my_driver)
             actions.move_to_element(mouse_btn_top).perform()
 
@@ -86,7 +80,7 @@ class Test_letskodeit_main_page:
 
 # 8. Move to the footer and write text in the opened file
 
-    def test_scroll_function(self):
+    def scroll_function(self):
         try:
             scroll_footer = WebDriverWait(self.my_driver, 10).until(EC.visibility_of_element_located(self.scroll_footer))
             self.my_driver.execute_script(

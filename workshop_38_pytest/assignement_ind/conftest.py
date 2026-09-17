@@ -5,33 +5,55 @@ import os
 from datetime import datetime
 
 @pytest.fixture()
-def browser (self):
+def browser ():
     try:
         my_driver = webdriver.Chrome()
         my_driver.maximize_window()
-        yield my_driver
-        my_driver.quit()
-        logging.info("Chrome browser activated")
         
-    except:
-        print("Error")
+        logging.info("Chrome browser activated")
+
+        yield my_driver
+
+        
+    except Exception as e:
+         logging.error(f'Failed to set up driver: {e}')
+         raise
+
+    finally:
+        if my_driver:
+            my_driver.quit()
+
+
 
 @pytest.fixture()
-def test_loger(request):
+def test_logger(request):
     today_date = datetime.today().date()
-    os.makedirs(f"logs_{today_date}", exist_ok=True)
-
     test_name = request.node.name
-    log_path = f"logs{today_date}/{test_name}.log"
+    logs_dir = f"logs_{today_date}"
+    
 
-    logging.basicConfig(
-    filename=log_path,
-    filemode='w+', 
-    level=logging.INFO,  
-    format='%(asctime)s [%(levelname)s] %(message)s',
-    datefmt='%m-%d-%Y', 
-    force=True
-)
+    try:
+        os.makedirs(f"logs_{today_date}", exist_ok=True)
+        log_path = f"logs_{today_date}/{test_name}.log"
+
+        logging.basicConfig(
+        filename=log_path,
+        filemode='w+', 
+        level=logging.INFO,  
+        format='%(asctime)s [%(levelname)s] %(message)s',
+        datefmt='%m-%d-%Y', 
+        force=True
+    )
+    except Exception as e:
+        logging.error(f'Failed to set up logger: {e}')
+        raise
+
+    logging.test_name = test_name
+    logging.screenshot_dir = f"{logs_dir}/screenshots"
+
+    logging.info(f"{test_name} is started")
+    yield logging
+    logging.info(f"{test_name} is finished")
 
     logging.info(f"{test_name} is started")
     yield logging

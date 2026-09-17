@@ -1,16 +1,15 @@
-from workshop_38_pytest.assignement_ind import test_data
 import logging
 import os
 import allure
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
-class Helper:
 
-    def __init__(self, my_driver, test_logger):
-        self.driver = my_driver
+class Helper():
+
+    def __init__(self, driver, test_logger):
+        self.driver = driver
         self.test_logger = test_logger
-
 
     def _error_with_screenshot(self, message):
         logging.error(message)
@@ -21,7 +20,7 @@ class Helper:
             name=f"{self.test_logger.test_name}_failure",
             attachment_type=allure.attachment_type.PNG,
         )
-
+    
     def go_to_page(self, url, new_window=False):
         try:
             if new_window:
@@ -102,8 +101,7 @@ class Helper:
             self._error_with_screenshot(f'Accept alert failed: {e}')
             raise
 
-
-def append_text_to_file(self, file_path, text):
+    def append_text_to_file(self, file_path, text):
         try:
             with open(file_path, 'a+') as f:
                 f.write(text + '\n')
@@ -111,4 +109,3 @@ def append_text_to_file(self, file_path, text):
         except Exception as e:
             self.test_logger.error(f'Append text to file failed for {file_path}: {e}')
             raise
-
