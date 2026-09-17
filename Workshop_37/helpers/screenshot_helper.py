@@ -5,7 +5,7 @@ class ScreenshotHelper:
 
     def __init__(self, driver):
         self.driver = driver
-        self.folder = Path(__file__).parent.parent / "screenshots"
+        self.folder = Path("screenshots")
         self.folder.mkdir(exist_ok=True)
 
     def take(self, name):

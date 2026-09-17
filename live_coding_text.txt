@@ -1,13 +1,12 @@
-Popup text:
+Alert text:
 Hello , share this practice page and share your knowledge
 
-Hidden element:
-Attribute: style
-Value: display: none;
+Hidden element style attribute:
+display: none;
 
 Footer text:
 
 
-Validation message:
-
+Login validation message:
+Incorrect login details. Please try again.
 

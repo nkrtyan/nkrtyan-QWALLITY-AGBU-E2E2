@@ -5,9 +5,9 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class LoginPage:
 
-    # -----------------------------
+    
     # Locators
-    # -----------------------------
+   
 
     EMAIL = (
         By.ID,
@@ -29,9 +29,9 @@ class LoginPage:
         "incorrectdetails"
     )
 
-    # -----------------------------
+    
     # Constructor
-    # -----------------------------
+    
 
     def __init__(self, driver):
 
@@ -42,9 +42,9 @@ class LoginPage:
             10
         )
 
-    # -----------------------------
+   
     # Enter Email
-    # -----------------------------
+    
 
     def enter_email(self, email):
 
@@ -60,9 +60,9 @@ class LoginPage:
             email
         )
 
-    # -----------------------------
+    
     # Enter Password
-    # -----------------------------
+    
 
     def enter_password(self, password):
 
@@ -78,9 +78,9 @@ class LoginPage:
             password
         )
 
-    # -----------------------------
+    
     # Click Login
-    # -----------------------------
+   
 
     def click_login(self):
 
@@ -92,9 +92,9 @@ class LoginPage:
 
         button.click()
 
-    # -----------------------------
+    
     # Get Error Message
-    # -----------------------------
+    
 
     def get_error_message(self):
 

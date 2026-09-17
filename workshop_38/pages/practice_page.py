@@ -6,9 +6,9 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class PracticePage:
 
-    # -----------------------------
+    
     # Locators
-    # -----------------------------
+    
 
     ALERT_BUTTON = (
         By.ID,
@@ -45,9 +45,9 @@ class PracticePage:
         "//a[contains(@href, '/login')]"
     )
 
-    # -----------------------------
+    
     # Constructor
-    # -----------------------------
+    
 
     def __init__(self, driver):
 
@@ -58,9 +58,9 @@ class PracticePage:
             10
         )
 
-    # -----------------------------
+
     # Alert
-    # -----------------------------
+    
 
     def click_alert(self):
 
@@ -82,9 +82,9 @@ class PracticePage:
 
         self.driver.switch_to.alert.accept()
 
-    # -----------------------------
+   
     # Hide element
-    # -----------------------------
+    
 
     def hide_textbox(self):
 
@@ -104,9 +104,9 @@ class PracticePage:
             "style"
         )
 
-    # -----------------------------
+    
     # Mouse Hover
-    # -----------------------------
+    
 
     def move_to_mouse_hover(self):
 
@@ -132,9 +132,9 @@ class PracticePage:
 
         top_option.click()
 
-    # -----------------------------
+    
     # Footer
-    # -----------------------------
+   
 
     def get_footer_text(self):
 
@@ -146,9 +146,9 @@ class PracticePage:
 
         return footer.text
 
-    # -----------------------------
+    
     # Sign In
-    # -----------------------------
+    
 
     def click_sign_in(self):
 
