@@ -1,0 +1,28 @@
+09-21-2026 [INFO] test_lets is started
+09-21-2026 [INFO] Opening page: https://www.letskodeit.com/practice
+09-21-2026 [INFO] Clicked element: ('xpath', '//input[@id = "alertbtn"]')
+09-21-2026 [INFO] Accepted alert with text: Hello , share this practice page and share your knowledge
+09-21-2026 [INFO] Appended text to file live_coding_text.txt: Alert text - Hello , share this practice page and share your knowledge
+09-21-2026 [INFO] Clicked element: ('xpath', '//input[@id = "displayed-text"]')
+09-21-2026 [INFO] Got attribute style for element ('id', 'displayed-text'): 
+09-21-2026 [INFO] Hidden attribute is - 
+09-21-2026 [INFO] Appended text to file live_coding_text.txt: Hidden attribute - 
+09-21-2026 [INFO] Clicked element: ('xpath', '//button[@id = "mousehover"]')
+09-21-2026 [INFO] Clicked element: ('xpath', '//a[text()= "Top"]')
+09-21-2026 [INFO] Mouse hover check passed
+09-21-2026 [INFO] Got text for element ('xpath', "//div[contains(@class, 'footer')]//p"): © 2026 letskodeit
+09-21-2026 [INFO] Footer text is - © 2026 letskodeit
+09-21-2026 [INFO] Appended text to file live_coding_text.txt: Footer text - © 2026 letskodeit
+09-21-2026 [INFO] Clicked element: ('xpath', "//h1[text()='Practice Page']//preceding::a[text()='Sign In']")
+09-21-2026 [INFO] Clicked sign in button
+09-21-2026 [INFO] Entered text into element: ('id', 'email')
+09-21-2026 [INFO] Entered text into element: ('id', 'login-password')
+09-21-2026 [INFO] Clicked element: ('id', 'login')
+09-21-2026 [INFO] Got text for element ('xpath', '//span[text() = "The email must be a valid email address."]'): The email must be a valid email address.
+09-21-2026 [INFO] Validation Message is - The email must be a valid email address.
+09-21-2026 [INFO] Appended text to file live_coding_text.txt: Sign in validation message - The email must be a valid email address.
+09-21-2026 [INFO] Opening page in a new window: google.com
+09-21-2026 [INFO] Switched to window: 1
+09-21-2026 [INFO] Opened Google page
+09-21-2026 [INFO] test_lets is finished
+09-21-2026 [INFO] test_lets is started

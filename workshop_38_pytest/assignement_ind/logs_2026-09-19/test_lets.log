@@ -1,0 +1,6 @@
+09-19-2026 [INFO] test_lets is started
+09-19-2026 [INFO] Opening page: https://www.letskodeit.com/practice
+09-19-2026 [INFO] Clicked element: ('xpath', '//input[@id = "alertbtn"]')
+09-19-2026 [INFO] Accepted alert with text: Hello , share this practice page and share your knowledge
+09-19-2026 [INFO] test_lets is finished
+09-19-2026 [INFO] test_lets is started

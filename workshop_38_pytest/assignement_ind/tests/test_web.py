@@ -1,66 +1,41 @@
-import logging
-from workshop_38_pytest.assignement_ind import test_data
-from workshop_38_pytest.assignement_ind.helpers import Helper
-from workshop_38_pytest.assignement_ind.pom.main_page import Test_letskodeit_main_page
-from workshop_38_pytest.assignement_ind.pom.sign_in_page import Test_sign_in
-
-if __name__ == "__main__":
-
-    helper = Helper()
-    driver = None
-
-    try:
-
-        # # Activate logging
-        # helper.setup_logging()
-
-        # Activate Chrome browser and open website
-        helper.test_navigate_to_page(driver)
-        logging.info("Website opened")
-
-        # Create Main Page object
-        main_page = Test_letskodeit_main_page(driver)
-
-        # Run Main Page actions
-        main_page.test_alert_click()
-        
-        main_page.test_hide_show_function()
-        
-
-        main_page.test_mouse_hover()
-        logging.info("Mouse hover action completed")
-
-        main_page.test_scroll_function()
-        logging.info("Scroll action completed")
-
-        # Create Sign In Page object
-        sign_in_page = Test_sign_in(
-            driver,
-            test_data.username,
-            test_data.my_password
-        )
-
-        # Run Sign In actions with incorrect credentials
-        sign_in_page.test_sign_in()
-        logging.info("Sign In completed unsuccessfully, Validation mesage shown")
-
-        # Opening other tab and website
-        sign_in_page.test_open_other_tab()
-        logging.info("New tab opened successfully")
-
-        logging.info("Test execution completed successfully")
-
-    except Exception as e:
-        logging.error("Test execution failed: %s", e)
-        if driver:
-            driver.save_screenshot("error.png")
-
-        raise
+import pytest
+from workshop_38_pytest.assignement_ind import config
+from workshop_38_pytest.assignement_ind.pom.main_page  import Letskodeit_main_page
+from workshop_38_pytest.assignement_ind.pom.sign_in_page import SignIn
+from workshop_38_pytest.assignement_ind.pom.google_page import GooglePage
 
 
-    finally:
-        # Close browser
-        if driver:
-            helper.close_browser(driver)
-            logging.info("Browser closed")
+@pytest.mark.regression
+def test_lets(browser, test_logger):
+
+    #Create objects
+    main_page_obj = Letskodeit_main_page(browser, test_logger)
+    google_page_obj = GooglePage(browser, test_logger)
+    sign_in_page_obj = SignIn(browser, test_logger)
+
+
+    main_page_obj.go_to_page(config.url)
+    main_page_obj.find_and_click(main_page_obj.alert_btn)
+    alert_text = main_page_obj.accept_alert()
+    main_page_obj.append_text_to_file(config.file_name, f'Alert text - {alert_text}')
+
+    hide_atr = main_page_obj.hide_show_function()
+    main_page_obj.append_text_to_file(config.file_name, f'Hidden attribute - {hide_atr}')
+    
+    main_page_obj.mouse_hover()
+    f_text = main_page_obj.scroll_function()
+    main_page_obj.append_text_to_file(config.file_name, f"Footer text - {f_text}")
+
+    main_page_obj.click_sign_in_btn()
+    validation_msg = sign_in_page_obj.sign_in()
+    main_page_obj.append_text_to_file(config.file_name, f'Sign in validation message - {validation_msg}')
+
+    google_page_obj.open_google_page()
+
+
+
+
+
+# if __name__ == "__main__":
+#     test_lets()
 

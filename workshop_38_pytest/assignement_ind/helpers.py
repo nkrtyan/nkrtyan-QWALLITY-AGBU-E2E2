@@ -103,7 +103,7 @@ class Helper:
             raise
 
 
-def append_text_to_file(self, file_path, text):
+    def append_text_to_file(self, file_path, text):
         try:
             with open(file_path, 'a+') as f:
                 f.write(text + '\n')

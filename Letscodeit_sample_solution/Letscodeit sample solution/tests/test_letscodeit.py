@@ -1,6 +1,6 @@
-import config
+from  Letscodeit_sample_solution import config
 import pytest
-from pages.practice_page import PracticePage
+from Letscodeit_sample_solution.pages.practice_page import PracticePage
 from pages.google_page import GooglePage
 from pages.sign_in_page import SignIn
 
