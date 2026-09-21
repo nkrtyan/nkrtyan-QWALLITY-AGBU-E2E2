@@ -1,0 +1,26 @@
+2026-09-21 02:22:06,006 - INFO - test_lets is started
+2026-09-21 02:22:06,010 - INFO - Opening page: https://www.letskodeit.com/practice
+2026-09-21 02:22:13,518 - INFO - Clicked element: ('id', 'alertbtn')
+2026-09-21 02:22:13,537 - INFO - Accepted alert with text: Hello , share this practice page and share your knowledge
+2026-09-21 02:22:13,569 - INFO - Appended text to file live_code.txt: Alert text - Hello , share this practice page and share your knowledge
+2026-09-21 02:22:13,782 - INFO - Clicked element: ('id', 'hide-textbox')
+2026-09-21 02:22:13,821 - INFO - Got attribute style for element ('id', 'displayed-text'): display: none;
+2026-09-21 02:22:13,821 - INFO - Hidden attribute is - display: none;
+2026-09-21 02:22:13,844 - INFO - Appended text to file live_code.txt: Hidden attribute - display: none;
+2026-09-21 02:22:14,025 - INFO - Clicked element: ('id', 'mousehover')
+2026-09-21 02:22:14,221 - INFO - Clicked element: ('xpath', "//button[@id='mousehover']//following::a[text()='Top']")
+2026-09-21 02:22:14,221 - INFO - Mouse hover check passed
+2026-09-21 02:22:14,296 - INFO - Got text for element ('xpath', "//div[contains(@class, 'footer')]//p"): © 2026 letskodeit
+2026-09-21 02:22:14,296 - INFO - Footer text is - © 2026 letskodeit
+2026-09-21 02:22:14,327 - INFO - Appended text to file live_code.txt: Footer text - © 2026 letskodeit
+2026-09-21 02:22:15,511 - INFO - Clicked sign in button
+2026-09-21 02:22:15,730 - INFO - Entered text into element: ('id', 'email')
+2026-09-21 02:22:15,908 - INFO - Entered text into element: ('id', 'login-password')
+2026-09-21 02:22:16,136 - INFO - Clicked element: ('id', 'login')
+2026-09-21 02:22:17,294 - INFO - Got text for element ('id', 'incorrectdetails'): Incorrect login details
+2026-09-21 02:22:17,294 - INFO - Validation Message is - Incorrect login details
+2026-09-21 02:22:17,315 - INFO - Appended text to file live_code.txt: Sign in validation message - Incorrect login details
+2026-09-21 02:22:17,316 - INFO - Opening page in a new window: https://www.google.com/
+2026-09-21 02:22:17,492 - INFO - Switched to window: 1
+2026-09-21 02:22:17,493 - INFO - Google page opened
+2026-09-21 02:22:17,496 - INFO - test_lets is finished
