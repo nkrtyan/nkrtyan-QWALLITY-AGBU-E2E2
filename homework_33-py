@@ -31,6 +31,7 @@ def test_python_search(browser):
         driver.quit()
 
 
+# TODO, everything is correct, besides function call, add mian block , call once the function and pass driver list 
 test_python_search("chrome")
 test_python_search("edge")
 
