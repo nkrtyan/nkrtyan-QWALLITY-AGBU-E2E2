@@ -1,0 +1,17 @@
+2026-08-12 20:37:22,975 - INFO - Directory created: ExaminationResults
+2026-08-12 20:38:15,579 - INFO - Directory already exists: ExaminationResults
+2026-08-12 20:40:20,485 - INFO - Directory already exists: ExaminationResults
+2026-08-12 20:40:32,704 - INFO - Directory already exists: ExaminationResults
+2026-08-12 20:42:00,217 - INFO - Directory already exists: ExaminationResults
+2026-08-12 20:42:14,209 - INFO - Directory already exists: ExaminationResults
+2026-08-12 20:44:11,104 - INFO - Directory already exists: ExaminationResults
+2026-08-12 20:44:11,692 - INFO - Excel file created: ExaminationResults\exam_results.xlsx
+2026-08-12 20:44:11,748 - INFO - Number of examined students: 5
+2026-08-12 20:44:11,748 - INFO - Best result: Sophia - 95
+2026-08-12 20:44:11,748 - INFO - Lowest result: Emma - 78
+2026-08-12 20:56:51,329 - INFO - Directory was not removed: ExaminationResults
+2026-08-13 18:00:56,533 - INFO - Directory created: ExaminationResults
+2026-08-13 18:00:57,083 - INFO - Excel file created: ExaminationResults\exam_results.xlsx
+2026-08-13 18:00:57,106 - INFO - Number of examined students: 5
+2026-08-13 18:00:57,106 - INFO - Best result: Sophia - 95
+2026-08-13 18:00:57,106 - INFO - Lowest result: Emma - 78
