@@ -32,7 +32,6 @@ class Helper:
             self._error_with_screenshot(f'Go to page failed: {e}')
             raise
 
-    # Алиас для совместимости с тестами
     def go_to_page(self, url, new_window=False):
         self.navigate_to_page(url, new_window)
 
@@ -46,7 +45,6 @@ class Helper:
             self.test_logger.error(f'Append text to file failed for {file_name}: {e}')
             raise
 
-    # Алиас для тестов
     def append_text_to_file(self, file_name, text):
         self.write_to_file(file_name, text)
 
@@ -64,7 +62,6 @@ class Helper:
             self._error_with_screenshot(f'Accept alert failed: {e}')
             raise
 
-    # Алиас для тестов
     def accept_alert(self, timeout=5):
         return self.get_and_accept_alert_text(timeout)
 
@@ -88,7 +85,6 @@ class Helper:
             self._error_with_screenshot(f'Find and click failed for {by_locator}: {e}')
             raise
 
-    # Алиас для тестов
     def find_and_click(self, by_locator, timeout=5):
         self.wait_and_click(by_locator, timeout)
 
@@ -115,7 +111,6 @@ class Helper:
             self._error_with_screenshot(f'Get attribute failed for {by_locator}: {e}')
             raise
 
-    # Алиас для тестов
     def get_attribute(self, by_locator, attribute, timeout=5):
         return self.wait_and_get_attribute(by_locator, attribute, timeout)
 
@@ -131,7 +126,6 @@ class Helper:
             self._error_with_screenshot(f'Get text failed for {by_locator}: {e}')
             raise
 
-    # Алиас для тестов
     def get_text(self, by_locator, timeout=5):
         return self.wait_and_get_text(by_locator, timeout)
 

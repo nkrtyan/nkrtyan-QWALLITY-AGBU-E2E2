@@ -8,7 +8,7 @@ class SignIn(Helper):
     submit_login_btn = (By.XPATH, "//button[@id='login']")
     error_msg_locator = (By.XPATH, "//span[@id='incorrectdetails']")
 
-    def sign_in(self): # Исправлено имя метода на sign_in, чтобы вызываться из теста
+    def sign_in(self):
         try:
             self.test_logger.info(f"Trying to login in by {data.username} user...")
             self.wait_and_send_keys(self.email_input, data.username)
