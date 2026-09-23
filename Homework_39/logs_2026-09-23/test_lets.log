@@ -1,0 +1,144 @@
+2026-09-23 21:24:03,847 [INFO] test_lets is started
+2026-09-23 21:24:03,975 [INFO] test_lets is finished
+2026-09-23 21:24:03,975 [INFO] Browser is closed
+2026-09-23 21:25:06,708 [INFO] test_lets is started
+2026-09-23 21:25:06,709 [INFO] Opening page: https://www.letskodeit.com/practice
+2026-09-23 21:25:12,582 [INFO] Clicked element: ('id', 'alertbtn')
+2026-09-23 21:25:12,586 [INFO] Accepted alert with text: Hello , share this practice page and share your knowledge
+2026-09-23 21:25:12,587 [INFO] Appended text to file live_coding_text.txt: Alert text - Hello , share this practice page and share your knowledge
+2026-09-23 21:25:12,633 [INFO] Clicked element: ('id', 'hide-textbox')
+2026-09-23 21:25:12,642 [INFO] Got attribute style for element ('id', 'displayed-text'): display: none;
+2026-09-23 21:25:12,643 [INFO] Hidden attribute is - display: none;
+2026-09-23 21:25:12,644 [INFO] Appended text to file live_coding_text.txt: Hidden attribute - display: none;
+2026-09-23 21:25:12,683 [INFO] Clicked element: ('id', 'mousehover')
+2026-09-23 21:25:12,725 [INFO] Clicked element: ('xpath', "//button[@id='mousehover']/following::a[text()='Top']")
+2026-09-23 21:25:12,725 [INFO] Mouse hover check passed
+2026-09-23 21:25:17,784 [ERROR] Get text failed for ('xpath', "//div[contains(@class, 'footer')]/p"): Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7686e1035+5a95]
+	chromedriver!(No symbol) [0x7ff768602c70]
+	chromedriver!(No symbol) [0x7ff768424a7d]
+	chromedriver!(No symbol) [0x7ff76847ff91]
+	chromedriver!(No symbol) [0x7ff76848025c]
+	chromedriver!(No symbol) [0x7ff7684d2f67]
+	chromedriver!(No symbol) [0x7ff7684cfbea]
+	chromedriver!(No symbol) [0x7ff768471d02]
+	chromedriver!(No symbol) [0x7ff768472b13]
+	chromedriver!GetHandleVerifier [0x7ff768b01411+425e71]
+	chromedriver!GetHandleVerifier [0x7ff768b2ca47+4514a7]
+	chromedriver!GetHandleVerifier [0x7ff768b2094e+4453ae]
+	chromedriver!GetHandleVerifier [0x7ff7687dbf6e+1009ce]
+	chromedriver!(No symbol) [0x7ff768610a05]
+	chromedriver!(No symbol) [0x7ff76860bcf4]
+	chromedriver!(No symbol) [0x7ff76860be84]
+	chromedriver!(No symbol) [0x7ff7685f66ac]
+	KERNEL32!BaseThreadInitThunk [0x7ff9295d5c07+17]
+	ntdll!RtlUserThreadStart [0x7ff92a086970+20]
+
+2026-09-23 21:25:17,938 [ERROR] Footer text check failed: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7686e1035+5a95]
+	chromedriver!(No symbol) [0x7ff768602c70]
+	chromedriver!(No symbol) [0x7ff768424a7d]
+	chromedriver!(No symbol) [0x7ff76847ff91]
+	chromedriver!(No symbol) [0x7ff76848025c]
+	chromedriver!(No symbol) [0x7ff7684d2f67]
+	chromedriver!(No symbol) [0x7ff7684cfbea]
+	chromedriver!(No symbol) [0x7ff768471d02]
+	chromedriver!(No symbol) [0x7ff768472b13]
+	chromedriver!GetHandleVerifier [0x7ff768b01411+425e71]
+	chromedriver!GetHandleVerifier [0x7ff768b2ca47+4514a7]
+	chromedriver!GetHandleVerifier [0x7ff768b2094e+4453ae]
+	chromedriver!GetHandleVerifier [0x7ff7687dbf6e+1009ce]
+	chromedriver!(No symbol) [0x7ff768610a05]
+	chromedriver!(No symbol) [0x7ff76860bcf4]
+	chromedriver!(No symbol) [0x7ff76860be84]
+	chromedriver!(No symbol) [0x7ff7685f66ac]
+	KERNEL32!BaseThreadInitThunk [0x7ff9295d5c07+17]
+	ntdll!RtlUserThreadStart [0x7ff92a086970+20]
+
+2026-09-23 21:25:18,025 [INFO] test_lets is finished
+2026-09-23 21:25:18,025 [INFO] Browser is closed
+2026-09-23 21:36:09,787 [INFO] test_lets is started
+2026-09-23 21:36:09,788 [INFO] Opening page: https://www.letskodeit.com/practice
+2026-09-23 21:36:16,540 [INFO] Clicked element: ('id', 'alertbtn')
+2026-09-23 21:36:16,544 [INFO] Accepted alert with text: Hello , share this practice page and share your knowledge
+2026-09-23 21:36:16,544 [INFO] Appended text to file live_coding_text.txt: Alert text - Hello , share this practice page and share your knowledge
+2026-09-23 21:36:16,591 [INFO] Clicked element: ('id', 'hide-textbox')
+2026-09-23 21:36:16,600 [INFO] Got attribute style for element ('id', 'displayed-text'): display: none;
+2026-09-23 21:36:16,600 [INFO] Hidden attribute is - display: none;
+2026-09-23 21:36:16,601 [INFO] Appended text to file live_coding_text.txt: Hidden attribute - display: none;
+2026-09-23 21:36:16,640 [INFO] Clicked element: ('id', 'mousehover')
+2026-09-23 21:36:16,683 [INFO] Clicked element: ('xpath', "//button[@id='mousehover']/following::a[text()='Top']")
+2026-09-23 21:36:16,683 [INFO] Mouse hover check passed
+2026-09-23 21:36:16,691 [INFO] Element scrolled to ('xpath', "(//p[contains(@class, 'jqCopyRight')])[1]") element
+2026-09-23 21:36:16,707 [INFO] Got text for element ('xpath', "(//p[contains(@class, 'jqCopyRight')])[1]"): © 2026 letskodeit
+2026-09-23 21:36:16,707 [INFO] Footer text is - © 2026 letskodeit
+2026-09-23 21:36:16,708 [INFO] Appended text to file live_coding_text.txt: Footer text - © 2026 letskodeit
+2026-09-23 21:36:17,518 [INFO] Clicked element: ('xpath', "//h1[text()='Practice Page']/preceding::a[text()='Sign In']")
+2026-09-23 21:36:17,518 [INFO] Clicked sign in button
+2026-09-23 21:36:17,518 [ERROR] An error occurred during the login flow. module 'testdata.test_data' has no attribute 'username'
+2026-09-23 21:36:17,593 [INFO] test_lets is finished
+2026-09-23 21:36:17,594 [INFO] Browser is closed
+2026-09-23 21:58:57,450 [INFO] test_lets is started
+2026-09-23 21:58:57,451 [INFO] Opening page: https://www.letskodeit.com/practice
+2026-09-23 21:59:03,791 [INFO] Clicked element: ('id', 'alertbtn')
+2026-09-23 21:59:03,794 [INFO] Accepted alert with text: Hello , share this practice page and share your knowledge
+2026-09-23 21:59:03,795 [INFO] Appended text to file live_coding_text.txt: Alert text - Hello , share this practice page and share your knowledge
+2026-09-23 21:59:03,841 [INFO] Clicked element: ('id', 'hide-textbox')
+2026-09-23 21:59:03,851 [INFO] Got attribute style for element ('id', 'displayed-text'): display: none;
+2026-09-23 21:59:03,851 [INFO] Hidden attribute is - display: none;
+2026-09-23 21:59:03,852 [INFO] Appended text to file live_coding_text.txt: Hidden attribute - display: none;
+2026-09-23 21:59:03,889 [INFO] Clicked element: ('id', 'mousehover')
+2026-09-23 21:59:03,932 [INFO] Clicked element: ('xpath', "//button[@id='mousehover']/following::a[text()='Top']")
+2026-09-23 21:59:03,932 [INFO] Mouse hover check passed
+2026-09-23 21:59:03,940 [INFO] Element scrolled to ('xpath', "(//p[contains(@class, 'jqCopyRight')])[1]") element
+2026-09-23 21:59:03,956 [INFO] Got text for element ('xpath', "(//p[contains(@class, 'jqCopyRight')])[1]"): © 2026 letskodeit
+2026-09-23 21:59:03,956 [INFO] Footer text is - © 2026 letskodeit
+2026-09-23 21:59:03,956 [INFO] Appended text to file live_coding_text.txt: Footer text - © 2026 letskodeit
+2026-09-23 21:59:04,625 [INFO] Clicked element: ('xpath', "//h1[text()='Practice Page']/preceding::a[text()='Sign In']")
+2026-09-23 21:59:04,625 [INFO] Clicked sign in button
+2026-09-23 21:59:04,625 [INFO] Trying to login in by avetdian@gmail.com user...
+2026-09-23 21:59:04,665 [INFO] Entered text into element: ('xpath', "//input[@name='email']")
+2026-09-23 21:59:04,703 [INFO] Entered text into element: ('xpath', "//input[@name='password']")
+2026-09-23 21:59:04,747 [INFO] Clicked element: ('xpath', "//button[@id='login']")
+2026-09-23 21:59:04,748 [INFO] Login btn clicked
+2026-09-23 21:59:05,269 [INFO] Got text for element ('xpath', "//span[@id='incorrectdetails']"): Incorrect login details
+2026-09-23 21:59:05,269 [INFO] The text of the error received 'Incorrect login details'
+2026-09-23 21:59:05,270 [INFO] Appended text to file live_coding_text.txt: Sign in validation message - Incorrect login details
+2026-09-23 21:59:05,270 [INFO] Opening page in a new window: https://www.google.com/
+2026-09-23 21:59:05,297 [INFO] Switched to window: 1
+2026-09-23 21:59:05,297 [INFO] Opened Google page
+2026-09-23 21:59:05,298 [INFO] test_lets is finished
+2026-09-23 21:59:05,298 [INFO] Browser is closed
+2026-09-23 22:00:18,273 [INFO] test_lets is started
+2026-09-23 22:00:18,274 [INFO] Opening page: https://www.letskodeit.com/practice
+2026-09-23 22:00:24,046 [INFO] Clicked element: ('id', 'alertbtn')
+2026-09-23 22:00:24,049 [INFO] Accepted alert with text: Hello , share this practice page and share your knowledge
+2026-09-23 22:00:24,050 [INFO] Appended text to file live_coding_text.txt: Alert text - Hello , share this practice page and share your knowledge
+2026-09-23 22:00:24,099 [INFO] Clicked element: ('id', 'hide-textbox')
+2026-09-23 22:00:24,108 [INFO] Got attribute style for element ('id', 'displayed-text'): display: none;
+2026-09-23 22:00:24,108 [INFO] Hidden attribute is - display: none;
+2026-09-23 22:00:24,108 [INFO] Appended text to file live_coding_text.txt: Hidden attribute - display: none;
+2026-09-23 22:00:24,148 [INFO] Clicked element: ('id', 'mousehover')
+2026-09-23 22:00:24,190 [INFO] Clicked element: ('xpath', "//button[@id='mousehover']/following::a[text()='Top']")
+2026-09-23 22:00:24,190 [INFO] Mouse hover check passed
+2026-09-23 22:00:24,199 [INFO] Element scrolled to ('xpath', "(//p[contains(@class, 'jqCopyRight')])[1]") element
+2026-09-23 22:00:24,213 [INFO] Got text for element ('xpath', "(//p[contains(@class, 'jqCopyRight')])[1]"): © 2026 letskodeit
+2026-09-23 22:00:24,213 [INFO] Footer text is - © 2026 letskodeit
+2026-09-23 22:00:24,213 [INFO] Appended text to file live_coding_text.txt: Footer text - © 2026 letskodeit
+2026-09-23 22:00:24,879 [INFO] Clicked element: ('xpath', "//h1[text()='Practice Page']/preceding::a[text()='Sign In']")
+2026-09-23 22:00:24,879 [INFO] Clicked sign in button
+2026-09-23 22:00:24,879 [INFO] Trying to login in by avetdian@gmail.com user...
+2026-09-23 22:00:24,919 [INFO] Entered text into element: ('xpath', "//input[@name='email']")
+2026-09-23 22:00:24,959 [INFO] Entered text into element: ('xpath', "//input[@name='password']")
+2026-09-23 22:00:25,007 [INFO] Clicked element: ('xpath', "//button[@id='login']")
+2026-09-23 22:00:25,007 [INFO] Login btn clicked
+2026-09-23 22:00:25,528 [INFO] Got text for element ('xpath', "//span[@id='incorrectdetails']"): Incorrect login details
+2026-09-23 22:00:25,528 [INFO] The text of the error received 'Incorrect login details'
+2026-09-23 22:00:25,529 [INFO] Appended text to file live_coding_text.txt: Sign in validation message - Incorrect login details
+2026-09-23 22:00:25,529 [INFO] Opening page in a new window: https://www.google.com/
+2026-09-23 22:00:25,558 [INFO] Switched to window: 1
+2026-09-23 22:00:25,558 [INFO] Opened Google page
+2026-09-23 22:00:25,558 [INFO] test_lets is finished
+2026-09-23 22:00:25,559 [INFO] Browser is closed

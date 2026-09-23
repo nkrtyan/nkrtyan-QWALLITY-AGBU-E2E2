@@ -1,3 +1,3 @@
-url = "https://www.letskodeit.com/practice"
-file_name = "live_coding_text.txt"
-google_url = "https://www.google.com/"
+practice_url = 'https://www.letskodeit.com/practice'
+google_url = 'https://www.google.com/'
+output_file = 'live_code.txt'
